@@ -1,0 +1,32 @@
+#[grammar: assign-gr] {
+    tokens {
+        NUM = [0-9]+
+        ID  = [a-zA-Z]+
+
+        ASSIGN = "->"
+    }
+    rules {
+        root = NUM:init ASSIGN ID:id { int $id = $init; }
+    }
+}
+
+#[grammar: id-gr] {
+    tokens {
+        ID  = [a-zA-Z]+
+
+        TYPE_OP = "as"
+    }
+    rules {
+        root = ID:id TYPE_OP ID:type { $id_$type }
+    }
+}
+
+#[assign-gr]
+3 -> some_int
+#[assign-gr]
+4 -> #[id-gr] other as int
+
+
+## RESULT
+int some_int = 3;
+int other_int = 4;

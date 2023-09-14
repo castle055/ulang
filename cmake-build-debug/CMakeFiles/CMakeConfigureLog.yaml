@@ -1,0 +1,2097 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineSystem.cmake:204 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Linux - 6.4.8-arch1-1 - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /usr/bin/cc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is GNU, found in:
+        /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /usr/bin/c++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is GNU, found in:
+        /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-2q95Uk"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-2q95Uk"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-2q95Uk
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_12efc && [1/2] /usr/bin/cc   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_12efc.dir/CMakeCCompilerABI.c.o -c /opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/cc
+        Target: x86_64-pc-linux-gnu
+        Configured with: /build/gcc/src/gcc/configure --enable-languages=ada,c,c++,d,fortran,go,lto,objc,obj-c++ --enable-bootstrap --prefix=/usr --libdir=/usr/lib --libexecdir=/usr/lib --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://bugs.archlinux.org/ --with-build-config=bootstrap-lto --with-linker-hash-style=gnu --with-system-zlib --enable-__cxa_atexit --enable-cet=auto --enable-checking=release --enable-clocale=gnu --enable-default-pie --enable-default-ssp --enable-gnu-indirect-function --enable-gnu-unique-object --enable-libstdcxx-backtrace --enable-link-serialization=1 --enable-linker-build-id --enable-lto --enable-multilib --enable-plugin --enable-shared --enable-threads=posix --disable-libssp --disable-libstdcxx-pch --disable-werror
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 13.2.1 20230801 (GCC) 
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_12efc.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_12efc.dir/'
+         /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/cc1 -quiet -v /opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_12efc.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fdiagnostics-color=always -o /tmp/cc2de9Iu.s
+        GNU C17 (GCC) version 13.2.1 20230801 (x86_64-pc-linux-gnu)
+        	compiled by GNU C version 13.2.1 20230801, GMP version 6.3.0, MPFR version 4.2.0-p12, MPC version 1.3.1, isl version isl-0.26-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../x86_64-pc-linux-gnu/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include
+         /usr/local/include
+         /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include-fixed
+         /usr/include
+        End of search list.
+        Compiler executable checksum: 865c2688a4f1e3f13d6bf2cc8fd98762
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_12efc.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_12efc.dir/'
+         as -v --64 -o CMakeFiles/cmTC_12efc.dir/CMakeCCompilerABI.c.o /tmp/cc2de9Iu.s
+        GNU assembler version 2.41.0 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.41.0
+        COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_12efc.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_12efc.dir/CMakeCCompilerABI.c.'
+        [2/2] : && /usr/bin/cc  -v CMakeFiles/cmTC_12efc.dir/CMakeCCompilerABI.c.o -o cmTC_12efc   && :
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/cc
+        COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/lto-wrapper
+        Target: x86_64-pc-linux-gnu
+        Configured with: /build/gcc/src/gcc/configure --enable-languages=ada,c,c++,d,fortran,go,lto,objc,obj-c++ --enable-bootstrap --prefix=/usr --libdir=/usr/lib --libexecdir=/usr/lib --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://bugs.archlinux.org/ --with-build-config=bootstrap-lto --with-linker-hash-style=gnu --with-system-zlib --enable-__cxa_atexit --enable-cet=auto --enable-checking=release --enable-clocale=gnu --enable-default-pie --enable-default-ssp --enable-gnu-indirect-function --enable-gnu-unique-object --enable-libstdcxx-backtrace --enable-link-serialization=1 --enable-linker-build-id --enable-lto --enable-multilib --enable-plugin --enable-shared --enable-threads=posix --disable-libssp --disable-libstdcxx-pch --disable-werror
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 13.2.1 20230801 (GCC) 
+        COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_12efc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_12efc.'
+         /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccI8qbKL.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_12efc /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../.. CMakeFiles/cmTC_12efc.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../lib/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_12efc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_12efc.'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include]
+          add: [/usr/local/include]
+          add: [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include-fixed]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include] ==> [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include-fixed] ==> [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include-fixed]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include;/usr/local/include;/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include-fixed;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:152 (message)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-2q95Uk]
+        ignore line: []
+        ignore line: [Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_12efc && [1/2] /usr/bin/cc   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_12efc.dir/CMakeCCompilerABI.c.o -c /opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/cc]
+        ignore line: [Target: x86_64-pc-linux-gnu]
+        ignore line: [Configured with: /build/gcc/src/gcc/configure --enable-languages=ada c c++ d fortran go lto objc obj-c++ --enable-bootstrap --prefix=/usr --libdir=/usr/lib --libexecdir=/usr/lib --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://bugs.archlinux.org/ --with-build-config=bootstrap-lto --with-linker-hash-style=gnu --with-system-zlib --enable-__cxa_atexit --enable-cet=auto --enable-checking=release --enable-clocale=gnu --enable-default-pie --enable-default-ssp --enable-gnu-indirect-function --enable-gnu-unique-object --enable-libstdcxx-backtrace --enable-link-serialization=1 --enable-linker-build-id --enable-lto --enable-multilib --enable-plugin --enable-shared --enable-threads=posix --disable-libssp --disable-libstdcxx-pch --disable-werror]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 13.2.1 20230801 (GCC) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_12efc.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_12efc.dir/']
+        ignore line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/cc1 -quiet -v /opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_12efc.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fdiagnostics-color=always -o /tmp/cc2de9Iu.s]
+        ignore line: [GNU C17 (GCC) version 13.2.1 20230801 (x86_64-pc-linux-gnu)]
+        ignore line: [	compiled by GNU C version 13.2.1 20230801  GMP version 6.3.0  MPFR version 4.2.0-p12  MPC version 1.3.1  isl version isl-0.26-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../x86_64-pc-linux-gnu/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include-fixed]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: 865c2688a4f1e3f13d6bf2cc8fd98762]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_12efc.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_12efc.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_12efc.dir/CMakeCCompilerABI.c.o /tmp/cc2de9Iu.s]
+        ignore line: [GNU assembler version 2.41.0 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.41.0]
+        ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_12efc.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_12efc.dir/CMakeCCompilerABI.c.']
+        ignore line: [[2/2] : && /usr/bin/cc  -v CMakeFiles/cmTC_12efc.dir/CMakeCCompilerABI.c.o -o cmTC_12efc   && :]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/cc]
+        ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/lto-wrapper]
+        ignore line: [Target: x86_64-pc-linux-gnu]
+        ignore line: [Configured with: /build/gcc/src/gcc/configure --enable-languages=ada c c++ d fortran go lto objc obj-c++ --enable-bootstrap --prefix=/usr --libdir=/usr/lib --libexecdir=/usr/lib --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://bugs.archlinux.org/ --with-build-config=bootstrap-lto --with-linker-hash-style=gnu --with-system-zlib --enable-__cxa_atexit --enable-cet=auto --enable-checking=release --enable-clocale=gnu --enable-default-pie --enable-default-ssp --enable-gnu-indirect-function --enable-gnu-unique-object --enable-libstdcxx-backtrace --enable-link-serialization=1 --enable-linker-build-id --enable-lto --enable-multilib --enable-plugin --enable-shared --enable-threads=posix --disable-libssp --disable-libstdcxx-pch --disable-werror]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 13.2.1 20230801 (GCC) ]
+        ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_12efc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_12efc.']
+        link line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccI8qbKL.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_12efc /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../.. CMakeFiles/cmTC_12efc.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../lib/crtn.o]
+          arg [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccI8qbKL.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-pie] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_12efc] ==> ignore
+          arg [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../lib/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../lib/Scrt1.o]
+          arg [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../lib/crti.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../lib/crti.o]
+          arg [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/crtbeginS.o]
+          arg [-L/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1] ==> dir [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1]
+          arg [-L/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../lib]
+          arg [-L/lib/../lib] ==> dir [/lib/../lib]
+          arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+          arg [-L/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../..] ==> dir [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../..]
+          arg [CMakeFiles/cmTC_12efc.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [--push-state] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--pop-state] ==> ignore
+          arg [-lc] ==> lib [c]
+          arg [-lgcc] ==> lib [gcc]
+          arg [--push-state] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--pop-state] ==> ignore
+          arg [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/crtendS.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/crtendS.o]
+          arg [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../lib/crtn.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../lib/crtn.o]
+        collapse obj [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../lib/Scrt1.o] ==> [/usr/lib/Scrt1.o]
+        collapse obj [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../lib/crti.o] ==> [/usr/lib/crti.o]
+        collapse obj [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../lib/crtn.o] ==> [/usr/lib/crtn.o]
+        collapse library dir [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1] ==> [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1]
+        collapse library dir [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../lib] ==> [/usr/lib]
+        collapse library dir [/lib/../lib] ==> [/lib]
+        collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+        collapse library dir [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../..] ==> [/usr/lib]
+        implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+        implicit objs: [/usr/lib/Scrt1.o;/usr/lib/crti.o;/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/crtbeginS.o;/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/crtendS.o;/usr/lib/crtn.o]
+        implicit dirs: [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1;/usr/lib;/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-PrHcXL"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-PrHcXL"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-PrHcXL
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_81bed && [1/2] /usr/bin/c++   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_81bed.dir/CMakeCXXCompilerABI.cpp.o -c /opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/c++
+        Target: x86_64-pc-linux-gnu
+        Configured with: /build/gcc/src/gcc/configure --enable-languages=ada,c,c++,d,fortran,go,lto,objc,obj-c++ --enable-bootstrap --prefix=/usr --libdir=/usr/lib --libexecdir=/usr/lib --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://bugs.archlinux.org/ --with-build-config=bootstrap-lto --with-linker-hash-style=gnu --with-system-zlib --enable-__cxa_atexit --enable-cet=auto --enable-checking=release --enable-clocale=gnu --enable-default-pie --enable-default-ssp --enable-gnu-indirect-function --enable-gnu-unique-object --enable-libstdcxx-backtrace --enable-link-serialization=1 --enable-linker-build-id --enable-lto --enable-multilib --enable-plugin --enable-shared --enable-threads=posix --disable-libssp --disable-libstdcxx-pch --disable-werror
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 13.2.1 20230801 (GCC) 
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_81bed.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_81bed.dir/'
+         /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/cc1plus -quiet -v -D_GNU_SOURCE /opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_81bed.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fdiagnostics-color=always -o /tmp/ccEz7V9X.s
+        GNU C++17 (GCC) version 13.2.1 20230801 (x86_64-pc-linux-gnu)
+        	compiled by GNU C version 13.2.1 20230801, GMP version 6.3.0, MPFR version 4.2.0-p12, MPC version 1.3.1, isl version isl-0.26-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../x86_64-pc-linux-gnu/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1
+         /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1/x86_64-pc-linux-gnu
+         /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1/backward
+         /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include
+         /usr/local/include
+         /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include-fixed
+         /usr/include
+        End of search list.
+        Compiler executable checksum: 5a490a353c29b926850bca65a518c219
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_81bed.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_81bed.dir/'
+         as -v --64 -o CMakeFiles/cmTC_81bed.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccEz7V9X.s
+        GNU assembler version 2.41.0 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.41.0
+        COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_81bed.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_81bed.dir/CMakeCXXCompilerABI.cpp.'
+        [2/2] : && /usr/bin/c++  -v CMakeFiles/cmTC_81bed.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_81bed   && :
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/c++
+        COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/lto-wrapper
+        Target: x86_64-pc-linux-gnu
+        Configured with: /build/gcc/src/gcc/configure --enable-languages=ada,c,c++,d,fortran,go,lto,objc,obj-c++ --enable-bootstrap --prefix=/usr --libdir=/usr/lib --libexecdir=/usr/lib --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://bugs.archlinux.org/ --with-build-config=bootstrap-lto --with-linker-hash-style=gnu --with-system-zlib --enable-__cxa_atexit --enable-cet=auto --enable-checking=release --enable-clocale=gnu --enable-default-pie --enable-default-ssp --enable-gnu-indirect-function --enable-gnu-unique-object --enable-libstdcxx-backtrace --enable-link-serialization=1 --enable-linker-build-id --enable-lto --enable-multilib --enable-plugin --enable-shared --enable-threads=posix --disable-libssp --disable-libstdcxx-pch --disable-werror
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 13.2.1 20230801 (GCC) 
+        COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_81bed' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_81bed.'
+         /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/cclcfWxq.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_81bed /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../.. CMakeFiles/cmTC_81bed.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../lib/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_81bed' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_81bed.'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1]
+          add: [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1/x86_64-pc-linux-gnu]
+          add: [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1/backward]
+          add: [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include]
+          add: [/usr/local/include]
+          add: [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include-fixed]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1] ==> [/usr/include/c++/13.2.1]
+        collapse include dir [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1/x86_64-pc-linux-gnu] ==> [/usr/include/c++/13.2.1/x86_64-pc-linux-gnu]
+        collapse include dir [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1/backward] ==> [/usr/include/c++/13.2.1/backward]
+        collapse include dir [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include] ==> [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include-fixed] ==> [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include-fixed]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/usr/include/c++/13.2.1;/usr/include/c++/13.2.1/x86_64-pc-linux-gnu;/usr/include/c++/13.2.1/backward;/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include;/usr/local/include;/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include-fixed;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:152 (message)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-PrHcXL]
+        ignore line: []
+        ignore line: [Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_81bed && [1/2] /usr/bin/c++   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_81bed.dir/CMakeCXXCompilerABI.cpp.o -c /opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/c++]
+        ignore line: [Target: x86_64-pc-linux-gnu]
+        ignore line: [Configured with: /build/gcc/src/gcc/configure --enable-languages=ada c c++ d fortran go lto objc obj-c++ --enable-bootstrap --prefix=/usr --libdir=/usr/lib --libexecdir=/usr/lib --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://bugs.archlinux.org/ --with-build-config=bootstrap-lto --with-linker-hash-style=gnu --with-system-zlib --enable-__cxa_atexit --enable-cet=auto --enable-checking=release --enable-clocale=gnu --enable-default-pie --enable-default-ssp --enable-gnu-indirect-function --enable-gnu-unique-object --enable-libstdcxx-backtrace --enable-link-serialization=1 --enable-linker-build-id --enable-lto --enable-multilib --enable-plugin --enable-shared --enable-threads=posix --disable-libssp --disable-libstdcxx-pch --disable-werror]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 13.2.1 20230801 (GCC) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_81bed.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_81bed.dir/']
+        ignore line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/cc1plus -quiet -v -D_GNU_SOURCE /opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_81bed.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fdiagnostics-color=always -o /tmp/ccEz7V9X.s]
+        ignore line: [GNU C++17 (GCC) version 13.2.1 20230801 (x86_64-pc-linux-gnu)]
+        ignore line: [	compiled by GNU C version 13.2.1 20230801  GMP version 6.3.0  MPFR version 4.2.0-p12  MPC version 1.3.1  isl version isl-0.26-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../x86_64-pc-linux-gnu/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1]
+        ignore line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1/x86_64-pc-linux-gnu]
+        ignore line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1/backward]
+        ignore line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include-fixed]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: 5a490a353c29b926850bca65a518c219]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_81bed.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_81bed.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_81bed.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccEz7V9X.s]
+        ignore line: [GNU assembler version 2.41.0 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.41.0]
+        ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_81bed.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_81bed.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [[2/2] : && /usr/bin/c++  -v CMakeFiles/cmTC_81bed.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_81bed   && :]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/c++]
+        ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/lto-wrapper]
+        ignore line: [Target: x86_64-pc-linux-gnu]
+        ignore line: [Configured with: /build/gcc/src/gcc/configure --enable-languages=ada c c++ d fortran go lto objc obj-c++ --enable-bootstrap --prefix=/usr --libdir=/usr/lib --libexecdir=/usr/lib --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://bugs.archlinux.org/ --with-build-config=bootstrap-lto --with-linker-hash-style=gnu --with-system-zlib --enable-__cxa_atexit --enable-cet=auto --enable-checking=release --enable-clocale=gnu --enable-default-pie --enable-default-ssp --enable-gnu-indirect-function --enable-gnu-unique-object --enable-libstdcxx-backtrace --enable-link-serialization=1 --enable-linker-build-id --enable-lto --enable-multilib --enable-plugin --enable-shared --enable-threads=posix --disable-libssp --disable-libstdcxx-pch --disable-werror]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 13.2.1 20230801 (GCC) ]
+        ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_81bed' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_81bed.']
+        link line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/cclcfWxq.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_81bed /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../.. CMakeFiles/cmTC_81bed.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../lib/crtn.o]
+          arg [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/cclcfWxq.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-pie] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_81bed] ==> ignore
+          arg [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../lib/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../lib/Scrt1.o]
+          arg [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../lib/crti.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../lib/crti.o]
+          arg [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/crtbeginS.o]
+          arg [-L/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1] ==> dir [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1]
+          arg [-L/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../lib]
+          arg [-L/lib/../lib] ==> dir [/lib/../lib]
+          arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+          arg [-L/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../..] ==> dir [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../..]
+          arg [CMakeFiles/cmTC_81bed.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [-lstdc++] ==> lib [stdc++]
+          arg [-lm] ==> lib [m]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lc] ==> lib [c]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/crtendS.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/crtendS.o]
+          arg [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../lib/crtn.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../lib/crtn.o]
+        collapse obj [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../lib/Scrt1.o] ==> [/usr/lib/Scrt1.o]
+        collapse obj [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../lib/crti.o] ==> [/usr/lib/crti.o]
+        collapse obj [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../lib/crtn.o] ==> [/usr/lib/crtn.o]
+        collapse library dir [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1] ==> [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1]
+        collapse library dir [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../lib] ==> [/usr/lib]
+        collapse library dir [/lib/../lib] ==> [/lib]
+        collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+        collapse library dir [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../..] ==> [/usr/lib]
+        implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+        implicit objs: [/usr/lib/Scrt1.o;/usr/lib/crti.o;/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/crtbeginS.o;/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/crtendS.o;/usr/lib/crtn.o]
+        implicit dirs: [/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1;/usr/lib;/lib]
+        implicit fwks: []
+      
+      
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:18 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-RWX6vz"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-RWX6vz"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-RWX6vz
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_a0c06 && [1/2] /usr/bin/c++ -Dflag_supported  -std=gnu++23 -fdiagnostics-color=always   -Wall -o CMakeFiles/cmTC_a0c06.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-RWX6vz/src.cxx
+        [2/2] : && /usr/bin/c++   CMakeFiles/cmTC_a0c06.dir/src.cxx.o -o cmTC_a0c06   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:19 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-apfZGO"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-apfZGO"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-apfZGO
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_eb3c2 && [1/2] /usr/bin/c++ -Dflag_supported  -Wall  -std=gnu++23 -fdiagnostics-color=always   -Wextra -o CMakeFiles/cmTC_eb3c2.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-apfZGO/src.cxx
+        [2/2] : && /usr/bin/c++ -Wall  CMakeFiles/cmTC_eb3c2.dir/src.cxx.o -o cmTC_eb3c2   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:20 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-IwDj48"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-IwDj48"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-IwDj48
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_e2880 && [1/2] /usr/bin/c++ -Dflag_supported  -Wall -Wextra  -std=gnu++23 -fdiagnostics-color=always   -pedantic -o CMakeFiles/cmTC_e2880.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-IwDj48/src.cxx
+        [2/2] : && /usr/bin/c++ -Wall -Wextra  CMakeFiles/cmTC_e2880.dir/src.cxx.o -o cmTC_e2880   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:21 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ID0ztN"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ID0ztN"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -pedantic"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ID0ztN
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_4dba1 && [1/2] /usr/bin/c++ -Dflag_supported  -Wall -Wextra -pedantic  -std=gnu++23 -fdiagnostics-color=always   -Werror -o CMakeFiles/cmTC_4dba1.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ID0ztN/src.cxx
+        [2/2] : && /usr/bin/c++ -Wall -Wextra -pedantic  CMakeFiles/cmTC_4dba1.dir/src.cxx.o -o cmTC_4dba1   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:22 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-0BB077"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-0BB077"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -pedantic -Werror"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-0BB077
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_f0382 && [1/2] /usr/bin/c++ -Dflag_supported  -Wall -Wextra -pedantic -Werror  -std=gnu++23 -fdiagnostics-color=always   -Wno-unused-function -o CMakeFiles/cmTC_f0382.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-0BB077/src.cxx
+        [2/2] : && /usr/bin/c++ -Wall -Wextra -pedantic -Werror  CMakeFiles/cmTC_f0382.dir/src.cxx.o -o cmTC_f0382   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:23 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-I7lujC"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-I7lujC"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -pedantic -Werror -Wno-unused-function"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-I7lujC
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_bccfc && [1/2] /usr/bin/c++ -Dflag_supported  -Wall -Wextra -pedantic -Werror -Wno-unused-function  -std=gnu++23 -fdiagnostics-color=always   -Wno-unused-parameter -o CMakeFiles/cmTC_bccfc.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-I7lujC/src.cxx
+        [2/2] : && /usr/bin/c++ -Wall -Wextra -pedantic -Werror -Wno-unused-function  CMakeFiles/cmTC_bccfc.dir/src.cxx.o -o cmTC_bccfc   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:24 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-jUP24M"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-jUP24M"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-jUP24M
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_0157d && [1/2] /usr/bin/c++ -Dflag_supported  -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter  -std=gnu++23 -fdiagnostics-color=always   -Wno-unused-variable -o CMakeFiles/cmTC_0157d.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-jUP24M/src.cxx
+        [2/2] : && /usr/bin/c++ -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter  CMakeFiles/cmTC_0157d.dir/src.cxx.o -o cmTC_0157d   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:25 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-v3WSfJ"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-v3WSfJ"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-v3WSfJ
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_492fd && [1/2] /usr/bin/c++ -Dflag_supported  -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable  -std=gnu++23 -fdiagnostics-color=always   -Wno-unused-value -o CMakeFiles/cmTC_492fd.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-v3WSfJ/src.cxx
+        [2/2] : && /usr/bin/c++ -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable  CMakeFiles/cmTC_492fd.dir/src.cxx.o -o cmTC_492fd   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:26 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-gaE4z9"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-gaE4z9"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-gaE4z9
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_51112 && [1/2] /usr/bin/c++ -Dflag_supported  -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value  -std=gnu++23 -fdiagnostics-color=always   -Wno-unused-but-set-variable -o CMakeFiles/cmTC_51112.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-gaE4z9/src.cxx
+        [2/2] : && /usr/bin/c++ -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value  CMakeFiles/cmTC_51112.dir/src.cxx.o -o cmTC_51112   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:27 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-eo39ox"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-eo39ox"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value -Wno-unused-but-set-variable"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-eo39ox
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_68c76 && [1/2] /usr/bin/c++ -Dflag_supported  -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value -Wno-unused-but-set-variable  -std=gnu++23 -fdiagnostics-color=always   -Wno-missing-field-initializers -o CMakeFiles/cmTC_68c76.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-eo39ox/src.cxx
+        [2/2] : && /usr/bin/c++ -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value -Wno-unused-but-set-variable  CMakeFiles/cmTC_68c76.dir/src.cxx.o -o cmTC_68c76   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:28 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-Mw3LnP"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-Mw3LnP"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value -Wno-unused-but-set-variable -Wno-missing-field-initializers"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-Mw3LnP
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_a1122 && [1/2] /usr/bin/c++ -Dflag_supported  -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value -Wno-unused-but-set-variable -Wno-missing-field-initializers  -std=gnu++23 -fdiagnostics-color=always   -Wno-unknown-pragmas -o CMakeFiles/cmTC_a1122.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-Mw3LnP/src.cxx
+        [2/2] : && /usr/bin/c++ -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value -Wno-unused-but-set-variable -Wno-missing-field-initializers  CMakeFiles/cmTC_a1122.dir/src.cxx.o -o cmTC_a1122   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:29 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-xOZTpR"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-xOZTpR"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value -Wno-unused-but-set-variable -Wno-missing-field-initializers -Wno-unknown-pragmas"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-xOZTpR
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_dec5e && [1/2] /usr/bin/c++ -Dflag_supported  -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value -Wno-unused-but-set-variable -Wno-missing-field-initializers -Wno-unknown-pragmas  -std=gnu++23 -fdiagnostics-color=always   -Wno-maybe-uninitialized -o CMakeFiles/cmTC_dec5e.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-xOZTpR/src.cxx
+        [2/2] : && /usr/bin/c++ -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value -Wno-unused-but-set-variable -Wno-missing-field-initializers -Wno-unknown-pragmas  CMakeFiles/cmTC_dec5e.dir/src.cxx.o -o cmTC_dec5e   && :
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:18 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-AuDleC"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-AuDleC"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-AuDleC
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_97ba9 && [1/2] /usr/bin/c++ -Dflag_supported  -std=gnu++23 -fdiagnostics-color=always   -Wall -o CMakeFiles/cmTC_97ba9.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-AuDleC/src.cxx
+        [2/2] : && /usr/bin/c++   CMakeFiles/cmTC_97ba9.dir/src.cxx.o -o cmTC_97ba9   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:19 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-iNMFTv"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-iNMFTv"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-iNMFTv
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_e8192 && [1/2] /usr/bin/c++ -Dflag_supported  -Wall  -std=gnu++23 -fdiagnostics-color=always   -Wextra -o CMakeFiles/cmTC_e8192.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-iNMFTv/src.cxx
+        [2/2] : && /usr/bin/c++ -Wall  CMakeFiles/cmTC_e8192.dir/src.cxx.o -o cmTC_e8192   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:20 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-f3wt1t"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-f3wt1t"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-f3wt1t
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_d1e98 && [1/2] /usr/bin/c++ -Dflag_supported  -Wall -Wextra  -std=gnu++23 -fdiagnostics-color=always   -pedantic -o CMakeFiles/cmTC_d1e98.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-f3wt1t/src.cxx
+        [2/2] : && /usr/bin/c++ -Wall -Wextra  CMakeFiles/cmTC_d1e98.dir/src.cxx.o -o cmTC_d1e98   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:21 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-bIZAkv"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-bIZAkv"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -pedantic"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-bIZAkv
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_16869 && [1/2] /usr/bin/c++ -Dflag_supported  -Wall -Wextra -pedantic  -std=gnu++23 -fdiagnostics-color=always   -Werror -o CMakeFiles/cmTC_16869.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-bIZAkv/src.cxx
+        [2/2] : && /usr/bin/c++ -Wall -Wextra -pedantic  CMakeFiles/cmTC_16869.dir/src.cxx.o -o cmTC_16869   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:22 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-2tcQCd"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-2tcQCd"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -pedantic -Werror"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-2tcQCd
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_ca2c4 && [1/2] /usr/bin/c++ -Dflag_supported  -Wall -Wextra -pedantic -Werror  -std=gnu++23 -fdiagnostics-color=always   -Wno-unused-function -o CMakeFiles/cmTC_ca2c4.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-2tcQCd/src.cxx
+        [2/2] : && /usr/bin/c++ -Wall -Wextra -pedantic -Werror  CMakeFiles/cmTC_ca2c4.dir/src.cxx.o -o cmTC_ca2c4   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:23 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-YWqncX"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-YWqncX"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -pedantic -Werror -Wno-unused-function"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-YWqncX
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_83649 && [1/2] /usr/bin/c++ -Dflag_supported  -Wall -Wextra -pedantic -Werror -Wno-unused-function  -std=gnu++23 -fdiagnostics-color=always   -Wno-unused-parameter -o CMakeFiles/cmTC_83649.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-YWqncX/src.cxx
+        [2/2] : && /usr/bin/c++ -Wall -Wextra -pedantic -Werror -Wno-unused-function  CMakeFiles/cmTC_83649.dir/src.cxx.o -o cmTC_83649   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:24 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-dGQyWj"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-dGQyWj"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-dGQyWj
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_9f1ea && [1/2] /usr/bin/c++ -Dflag_supported  -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter  -std=gnu++23 -fdiagnostics-color=always   -Wno-unused-variable -o CMakeFiles/cmTC_9f1ea.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-dGQyWj/src.cxx
+        [2/2] : && /usr/bin/c++ -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter  CMakeFiles/cmTC_9f1ea.dir/src.cxx.o -o cmTC_9f1ea   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:25 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-Zfpsal"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-Zfpsal"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-Zfpsal
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_1129a && [1/2] /usr/bin/c++ -Dflag_supported  -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable  -std=gnu++23 -fdiagnostics-color=always   -Wno-unused-value -o CMakeFiles/cmTC_1129a.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-Zfpsal/src.cxx
+        [2/2] : && /usr/bin/c++ -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable  CMakeFiles/cmTC_1129a.dir/src.cxx.o -o cmTC_1129a   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:26 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-XAmKst"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-XAmKst"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-XAmKst
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_f5441 && [1/2] /usr/bin/c++ -Dflag_supported  -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value  -std=gnu++23 -fdiagnostics-color=always   -Wno-unused-but-set-variable -o CMakeFiles/cmTC_f5441.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-XAmKst/src.cxx
+        [2/2] : && /usr/bin/c++ -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value  CMakeFiles/cmTC_f5441.dir/src.cxx.o -o cmTC_f5441   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:27 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-RcgyGY"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-RcgyGY"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value -Wno-unused-but-set-variable"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-RcgyGY
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_4f7c2 && [1/2] /usr/bin/c++ -Dflag_supported  -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value -Wno-unused-but-set-variable  -std=gnu++23 -fdiagnostics-color=always   -Wno-missing-field-initializers -o CMakeFiles/cmTC_4f7c2.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-RcgyGY/src.cxx
+        [2/2] : && /usr/bin/c++ -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value -Wno-unused-but-set-variable  CMakeFiles/cmTC_4f7c2.dir/src.cxx.o -o cmTC_4f7c2   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:28 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-uMggec"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-uMggec"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value -Wno-unused-but-set-variable -Wno-missing-field-initializers"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-uMggec
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_46b8c && [1/2] /usr/bin/c++ -Dflag_supported  -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value -Wno-unused-but-set-variable -Wno-missing-field-initializers  -std=gnu++23 -fdiagnostics-color=always   -Wno-unknown-pragmas -o CMakeFiles/cmTC_46b8c.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-uMggec/src.cxx
+        [2/2] : && /usr/bin/c++ -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value -Wno-unused-but-set-variable -Wno-missing-field-initializers  CMakeFiles/cmTC_46b8c.dir/src.cxx.o -o cmTC_46b8c   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:29 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-RVWfaQ"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-RVWfaQ"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value -Wno-unused-but-set-variable -Wno-missing-field-initializers -Wno-unknown-pragmas"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-RVWfaQ
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_bd991 && [1/2] /usr/bin/c++ -Dflag_supported  -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value -Wno-unused-but-set-variable -Wno-missing-field-initializers -Wno-unknown-pragmas  -std=gnu++23 -fdiagnostics-color=always   -Wno-maybe-uninitialized -o CMakeFiles/cmTC_bd991.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-RVWfaQ/src.cxx
+        [2/2] : && /usr/bin/c++ -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value -Wno-unused-but-set-variable -Wno-missing-field-initializers -Wno-unknown-pragmas  CMakeFiles/cmTC_bd991.dir/src.cxx.o -o cmTC_bd991   && :
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:18 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-n8dU7l"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-n8dU7l"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-n8dU7l
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_69c49 && [1/2] /usr/bin/c++ -Dflag_supported  -std=gnu++23 -fdiagnostics-color=always   -Wall -o CMakeFiles/cmTC_69c49.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-n8dU7l/src.cxx
+        [2/2] : && /usr/bin/c++   CMakeFiles/cmTC_69c49.dir/src.cxx.o -o cmTC_69c49   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:19 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-7xXkpD"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-7xXkpD"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-7xXkpD
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_5a8a0 && [1/2] /usr/bin/c++ -Dflag_supported  -Wall  -std=gnu++23 -fdiagnostics-color=always   -Wextra -o CMakeFiles/cmTC_5a8a0.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-7xXkpD/src.cxx
+        [2/2] : && /usr/bin/c++ -Wall  CMakeFiles/cmTC_5a8a0.dir/src.cxx.o -o cmTC_5a8a0   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:20 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-VLF2JR"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-VLF2JR"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-VLF2JR
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_c8e5a && [1/2] /usr/bin/c++ -Dflag_supported  -Wall -Wextra  -std=gnu++23 -fdiagnostics-color=always   -pedantic -o CMakeFiles/cmTC_c8e5a.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-VLF2JR/src.cxx
+        [2/2] : && /usr/bin/c++ -Wall -Wextra  CMakeFiles/cmTC_c8e5a.dir/src.cxx.o -o cmTC_c8e5a   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:21 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-qFvYew"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-qFvYew"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -pedantic"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-qFvYew
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_b6a88 && [1/2] /usr/bin/c++ -Dflag_supported  -Wall -Wextra -pedantic  -std=gnu++23 -fdiagnostics-color=always   -Werror -o CMakeFiles/cmTC_b6a88.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-qFvYew/src.cxx
+        [2/2] : && /usr/bin/c++ -Wall -Wextra -pedantic  CMakeFiles/cmTC_b6a88.dir/src.cxx.o -o cmTC_b6a88   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:22 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-XtxsQU"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-XtxsQU"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -pedantic -Werror"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-XtxsQU
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_1978c && [1/2] /usr/bin/c++ -Dflag_supported  -Wall -Wextra -pedantic -Werror  -std=gnu++23 -fdiagnostics-color=always   -Wno-unused-function -o CMakeFiles/cmTC_1978c.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-XtxsQU/src.cxx
+        [2/2] : && /usr/bin/c++ -Wall -Wextra -pedantic -Werror  CMakeFiles/cmTC_1978c.dir/src.cxx.o -o cmTC_1978c   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:23 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ych8TN"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ych8TN"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -pedantic -Werror -Wno-unused-function"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ych8TN
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_99f5e && [1/2] /usr/bin/c++ -Dflag_supported  -Wall -Wextra -pedantic -Werror -Wno-unused-function  -std=gnu++23 -fdiagnostics-color=always   -Wno-unused-parameter -o CMakeFiles/cmTC_99f5e.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ych8TN/src.cxx
+        [2/2] : && /usr/bin/c++ -Wall -Wextra -pedantic -Werror -Wno-unused-function  CMakeFiles/cmTC_99f5e.dir/src.cxx.o -o cmTC_99f5e   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:24 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-MeUI2q"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-MeUI2q"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-MeUI2q
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_09411 && [1/2] /usr/bin/c++ -Dflag_supported  -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter  -std=gnu++23 -fdiagnostics-color=always   -Wno-unused-variable -o CMakeFiles/cmTC_09411.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-MeUI2q/src.cxx
+        [2/2] : && /usr/bin/c++ -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter  CMakeFiles/cmTC_09411.dir/src.cxx.o -o cmTC_09411   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:25 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-Wk12oD"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-Wk12oD"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-Wk12oD
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_52876 && [1/2] /usr/bin/c++ -Dflag_supported  -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable  -std=gnu++23 -fdiagnostics-color=always   -Wno-unused-value -o CMakeFiles/cmTC_52876.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-Wk12oD/src.cxx
+        [2/2] : && /usr/bin/c++ -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable  CMakeFiles/cmTC_52876.dir/src.cxx.o -o cmTC_52876   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:26 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-e2cLxo"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-e2cLxo"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-e2cLxo
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_01549 && [1/2] /usr/bin/c++ -Dflag_supported  -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value  -std=gnu++23 -fdiagnostics-color=always   -Wno-unused-but-set-variable -o CMakeFiles/cmTC_01549.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-e2cLxo/src.cxx
+        [2/2] : && /usr/bin/c++ -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value  CMakeFiles/cmTC_01549.dir/src.cxx.o -o cmTC_01549   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:27 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-shScuG"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-shScuG"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value -Wno-unused-but-set-variable"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-shScuG
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_6b456 && [1/2] /usr/bin/c++ -Dflag_supported  -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value -Wno-unused-but-set-variable  -std=gnu++23 -fdiagnostics-color=always   -Wno-missing-field-initializers -o CMakeFiles/cmTC_6b456.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-shScuG/src.cxx
+        [2/2] : && /usr/bin/c++ -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value -Wno-unused-but-set-variable  CMakeFiles/cmTC_6b456.dir/src.cxx.o -o cmTC_6b456   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:28 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-1dCjNk"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-1dCjNk"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value -Wno-unused-but-set-variable -Wno-missing-field-initializers"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-1dCjNk
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_5c37f && [1/2] /usr/bin/c++ -Dflag_supported  -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value -Wno-unused-but-set-variable -Wno-missing-field-initializers  -std=gnu++23 -fdiagnostics-color=always   -Wno-unknown-pragmas -o CMakeFiles/cmTC_5c37f.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-1dCjNk/src.cxx
+        [2/2] : && /usr/bin/c++ -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value -Wno-unused-but-set-variable -Wno-missing-field-initializers  CMakeFiles/cmTC_5c37f.dir/src.cxx.o -o cmTC_5c37f   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:29 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-Z7THai"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-Z7THai"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value -Wno-unused-but-set-variable -Wno-missing-field-initializers -Wno-unknown-pragmas"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-Z7THai
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_a0706 && [1/2] /usr/bin/c++ -Dflag_supported  -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value -Wno-unused-but-set-variable -Wno-missing-field-initializers -Wno-unknown-pragmas  -std=gnu++23 -fdiagnostics-color=always   -Wno-maybe-uninitialized -o CMakeFiles/cmTC_a0706.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-Z7THai/src.cxx
+        [2/2] : && /usr/bin/c++ -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value -Wno-unused-but-set-variable -Wno-missing-field-initializers -Wno-unknown-pragmas  CMakeFiles/cmTC_a0706.dir/src.cxx.o -o cmTC_a0706   && :
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:18 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-X91IzW"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-X91IzW"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-X91IzW
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_ab75a && [1/2] /usr/bin/c++ -Dflag_supported  -std=gnu++23 -fdiagnostics-color=always   -Wall -o CMakeFiles/cmTC_ab75a.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-X91IzW/src.cxx
+        [2/2] : && /usr/bin/c++   CMakeFiles/cmTC_ab75a.dir/src.cxx.o -o cmTC_ab75a   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:19 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-9IaKGr"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-9IaKGr"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-9IaKGr
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_04e23 && [1/2] /usr/bin/c++ -Dflag_supported  -Wall  -std=gnu++23 -fdiagnostics-color=always   -Wextra -o CMakeFiles/cmTC_04e23.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-9IaKGr/src.cxx
+        [2/2] : && /usr/bin/c++ -Wall  CMakeFiles/cmTC_04e23.dir/src.cxx.o -o cmTC_04e23   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:20 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-sjxab2"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-sjxab2"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-sjxab2
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_7772f && [1/2] /usr/bin/c++ -Dflag_supported  -Wall -Wextra  -std=gnu++23 -fdiagnostics-color=always   -pedantic -o CMakeFiles/cmTC_7772f.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-sjxab2/src.cxx
+        [2/2] : && /usr/bin/c++ -Wall -Wextra  CMakeFiles/cmTC_7772f.dir/src.cxx.o -o cmTC_7772f   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:21 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-IAmz6l"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-IAmz6l"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -pedantic"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-IAmz6l
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_b1e6e && [1/2] /usr/bin/c++ -Dflag_supported  -Wall -Wextra -pedantic  -std=gnu++23 -fdiagnostics-color=always   -Werror -o CMakeFiles/cmTC_b1e6e.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-IAmz6l/src.cxx
+        [2/2] : && /usr/bin/c++ -Wall -Wextra -pedantic  CMakeFiles/cmTC_b1e6e.dir/src.cxx.o -o cmTC_b1e6e   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:22 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-BQtnnF"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-BQtnnF"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -pedantic -Werror"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-BQtnnF
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_95350 && [1/2] /usr/bin/c++ -Dflag_supported  -Wall -Wextra -pedantic -Werror  -std=gnu++23 -fdiagnostics-color=always   -Wno-unused-function -o CMakeFiles/cmTC_95350.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-BQtnnF/src.cxx
+        [2/2] : && /usr/bin/c++ -Wall -Wextra -pedantic -Werror  CMakeFiles/cmTC_95350.dir/src.cxx.o -o cmTC_95350   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:23 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-BYq2Dx"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-BYq2Dx"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -pedantic -Werror -Wno-unused-function"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-BYq2Dx
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_34e31 && [1/2] /usr/bin/c++ -Dflag_supported  -Wall -Wextra -pedantic -Werror -Wno-unused-function  -std=gnu++23 -fdiagnostics-color=always   -Wno-unused-parameter -o CMakeFiles/cmTC_34e31.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-BYq2Dx/src.cxx
+        [2/2] : && /usr/bin/c++ -Wall -Wextra -pedantic -Werror -Wno-unused-function  CMakeFiles/cmTC_34e31.dir/src.cxx.o -o cmTC_34e31   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:24 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-Umx7fR"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-Umx7fR"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-Umx7fR
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_72d34 && [1/2] /usr/bin/c++ -Dflag_supported  -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter  -std=gnu++23 -fdiagnostics-color=always   -Wno-unused-variable -o CMakeFiles/cmTC_72d34.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-Umx7fR/src.cxx
+        [2/2] : && /usr/bin/c++ -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter  CMakeFiles/cmTC_72d34.dir/src.cxx.o -o cmTC_72d34   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:25 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-OYcGhg"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-OYcGhg"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-OYcGhg
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_6edc9 && [1/2] /usr/bin/c++ -Dflag_supported  -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable  -std=gnu++23 -fdiagnostics-color=always   -Wno-unused-value -o CMakeFiles/cmTC_6edc9.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-OYcGhg/src.cxx
+        [2/2] : && /usr/bin/c++ -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable  CMakeFiles/cmTC_6edc9.dir/src.cxx.o -o cmTC_6edc9   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:26 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-UGlvQU"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-UGlvQU"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-UGlvQU
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_dae61 && [1/2] /usr/bin/c++ -Dflag_supported  -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value  -std=gnu++23 -fdiagnostics-color=always   -Wno-unused-but-set-variable -o CMakeFiles/cmTC_dae61.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-UGlvQU/src.cxx
+        [2/2] : && /usr/bin/c++ -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value  CMakeFiles/cmTC_dae61.dir/src.cxx.o -o cmTC_dae61   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:27 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-HYzYr6"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-HYzYr6"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value -Wno-unused-but-set-variable"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-HYzYr6
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_c77b4 && [1/2] /usr/bin/c++ -Dflag_supported  -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value -Wno-unused-but-set-variable  -std=gnu++23 -fdiagnostics-color=always   -Wno-missing-field-initializers -o CMakeFiles/cmTC_c77b4.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-HYzYr6/src.cxx
+        [2/2] : && /usr/bin/c++ -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value -Wno-unused-but-set-variable  CMakeFiles/cmTC_c77b4.dir/src.cxx.o -o cmTC_c77b4   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:28 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-anaJES"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-anaJES"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value -Wno-unused-but-set-variable -Wno-missing-field-initializers"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-anaJES
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_d7837 && [1/2] /usr/bin/c++ -Dflag_supported  -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value -Wno-unused-but-set-variable -Wno-missing-field-initializers  -std=gnu++23 -fdiagnostics-color=always   -Wno-unknown-pragmas -o CMakeFiles/cmTC_d7837.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-anaJES/src.cxx
+        [2/2] : && /usr/bin/c++ -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value -Wno-unused-but-set-variable -Wno-missing-field-initializers  CMakeFiles/cmTC_d7837.dir/src.cxx.o -o cmTC_d7837   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:29 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-g9YcgU"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-g9YcgU"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value -Wno-unused-but-set-variable -Wno-missing-field-initializers -Wno-unknown-pragmas"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-g9YcgU
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_83f9a && [1/2] /usr/bin/c++ -Dflag_supported  -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value -Wno-unused-but-set-variable -Wno-missing-field-initializers -Wno-unknown-pragmas  -std=gnu++23 -fdiagnostics-color=always   -Wno-maybe-uninitialized -o CMakeFiles/cmTC_83f9a.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-g9YcgU/src.cxx
+        [2/2] : && /usr/bin/c++ -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value -Wno-unused-but-set-variable -Wno-missing-field-initializers -Wno-unknown-pragmas  CMakeFiles/cmTC_83f9a.dir/src.cxx.o -o cmTC_83f9a   && :
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:18 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-O7dONd"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-O7dONd"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-O7dONd
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_57b7b && [1/2] /usr/bin/c++ -Dflag_supported  -std=gnu++23 -fdiagnostics-color=always   -Wall -o CMakeFiles/cmTC_57b7b.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-O7dONd/src.cxx
+        [2/2] : && /usr/bin/c++   CMakeFiles/cmTC_57b7b.dir/src.cxx.o -o cmTC_57b7b   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:19 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-nLbJG5"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-nLbJG5"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-nLbJG5
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_1ed44 && [1/2] /usr/bin/c++ -Dflag_supported  -Wall  -std=gnu++23 -fdiagnostics-color=always   -Wextra -o CMakeFiles/cmTC_1ed44.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-nLbJG5/src.cxx
+        [2/2] : && /usr/bin/c++ -Wall  CMakeFiles/cmTC_1ed44.dir/src.cxx.o -o cmTC_1ed44   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:20 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-1pvjwp"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-1pvjwp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-1pvjwp
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_ff6b9 && [1/2] /usr/bin/c++ -Dflag_supported  -Wall -Wextra  -std=gnu++23 -fdiagnostics-color=always   -pedantic -o CMakeFiles/cmTC_ff6b9.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-1pvjwp/src.cxx
+        [2/2] : && /usr/bin/c++ -Wall -Wextra  CMakeFiles/cmTC_ff6b9.dir/src.cxx.o -o cmTC_ff6b9   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:21 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-sN2oDt"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-sN2oDt"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -pedantic"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-sN2oDt
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_3a087 && [1/2] /usr/bin/c++ -Dflag_supported  -Wall -Wextra -pedantic  -std=gnu++23 -fdiagnostics-color=always   -Werror -o CMakeFiles/cmTC_3a087.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-sN2oDt/src.cxx
+        [2/2] : && /usr/bin/c++ -Wall -Wextra -pedantic  CMakeFiles/cmTC_3a087.dir/src.cxx.o -o cmTC_3a087   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:22 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-zdGshH"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-zdGshH"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -pedantic -Werror"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-zdGshH
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_d0f04 && [1/2] /usr/bin/c++ -Dflag_supported  -Wall -Wextra -pedantic -Werror  -std=gnu++23 -fdiagnostics-color=always   -Wno-unused-function -o CMakeFiles/cmTC_d0f04.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-zdGshH/src.cxx
+        [2/2] : && /usr/bin/c++ -Wall -Wextra -pedantic -Werror  CMakeFiles/cmTC_d0f04.dir/src.cxx.o -o cmTC_d0f04   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:23 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-R3Bfbh"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-R3Bfbh"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -pedantic -Werror -Wno-unused-function"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-R3Bfbh
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_1ec85 && [1/2] /usr/bin/c++ -Dflag_supported  -Wall -Wextra -pedantic -Werror -Wno-unused-function  -std=gnu++23 -fdiagnostics-color=always   -Wno-unused-parameter -o CMakeFiles/cmTC_1ec85.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-R3Bfbh/src.cxx
+        [2/2] : && /usr/bin/c++ -Wall -Wextra -pedantic -Werror -Wno-unused-function  CMakeFiles/cmTC_1ec85.dir/src.cxx.o -o cmTC_1ec85   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:24 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-CFxKte"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-CFxKte"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-CFxKte
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_04ff1 && [1/2] /usr/bin/c++ -Dflag_supported  -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter  -std=gnu++23 -fdiagnostics-color=always   -Wno-unused-variable -o CMakeFiles/cmTC_04ff1.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-CFxKte/src.cxx
+        [2/2] : && /usr/bin/c++ -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter  CMakeFiles/cmTC_04ff1.dir/src.cxx.o -o cmTC_04ff1   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:25 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-JbgLZf"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-JbgLZf"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-JbgLZf
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_91924 && [1/2] /usr/bin/c++ -Dflag_supported  -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable  -std=gnu++23 -fdiagnostics-color=always   -Wno-unused-value -o CMakeFiles/cmTC_91924.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-JbgLZf/src.cxx
+        [2/2] : && /usr/bin/c++ -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable  CMakeFiles/cmTC_91924.dir/src.cxx.o -o cmTC_91924   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:26 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-BEOE5e"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-BEOE5e"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-BEOE5e
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_d051d && [1/2] /usr/bin/c++ -Dflag_supported  -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value  -std=gnu++23 -fdiagnostics-color=always   -Wno-unused-but-set-variable -o CMakeFiles/cmTC_d051d.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-BEOE5e/src.cxx
+        [2/2] : && /usr/bin/c++ -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value  CMakeFiles/cmTC_d051d.dir/src.cxx.o -o cmTC_d051d   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:27 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-pGyEZP"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-pGyEZP"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value -Wno-unused-but-set-variable"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-pGyEZP
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_6e047 && [1/2] /usr/bin/c++ -Dflag_supported  -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value -Wno-unused-but-set-variable  -std=gnu++23 -fdiagnostics-color=always   -Wno-missing-field-initializers -o CMakeFiles/cmTC_6e047.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-pGyEZP/src.cxx
+        [2/2] : && /usr/bin/c++ -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value -Wno-unused-but-set-variable  CMakeFiles/cmTC_6e047.dir/src.cxx.o -o cmTC_6e047   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:28 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-DB88ix"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-DB88ix"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value -Wno-unused-but-set-variable -Wno-missing-field-initializers"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-DB88ix
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_13e3b && [1/2] /usr/bin/c++ -Dflag_supported  -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value -Wno-unused-but-set-variable -Wno-missing-field-initializers  -std=gnu++23 -fdiagnostics-color=always   -Wno-unknown-pragmas -o CMakeFiles/cmTC_13e3b.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-DB88ix/src.cxx
+        [2/2] : && /usr/bin/c++ -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value -Wno-unused-but-set-variable -Wno-missing-field-initializers  CMakeFiles/cmTC_13e3b.dir/src.cxx.o -o cmTC_13e3b   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:29 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-2KOsOI"
+      binary: "/home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-2KOsOI"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value -Wno-unused-but-set-variable -Wno-missing-field-initializers -Wno-unknown-pragmas"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-2KOsOI
+        
+        Run Build Command(s):/opt/clion/bin/ninja/linux/x64/ninja -v cmTC_3f414 && [1/2] /usr/bin/c++ -Dflag_supported  -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value -Wno-unused-but-set-variable -Wno-missing-field-initializers -Wno-unknown-pragmas  -std=gnu++23 -fdiagnostics-color=always   -Wno-maybe-uninitialized -o CMakeFiles/cmTC_3f414.dir/src.cxx.o -c /home/castle/repos/cpr/ulang/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-2KOsOI/src.cxx
+        [2/2] : && /usr/bin/c++ -Wall -Wextra -pedantic -Werror -Wno-unused-function -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value -Wno-unused-but-set-variable -Wno-missing-field-initializers -Wno-unknown-pragmas  CMakeFiles/cmTC_3f414.dir/src.cxx.o -o cmTC_3f414   && :
+        
+      exitCode: 0
+...

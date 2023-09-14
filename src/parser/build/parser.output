@@ -1,0 +1,533 @@
+Terminals unused in grammar
+
+    ROOT
+
+
+State 45 conflicts: 1 shift/reduce
+State 48 conflicts: 1 shift/reduce
+
+
+Grammar
+
+    0 $accept: root END
+
+    1 root: token_list END
+
+    2 token_list: any_token
+    3           | GRAMMAR_TAG
+    4           | grammar_spec
+    5           | token_list any_token
+    6           | token_list GRAMMAR_TAG
+    7           | token_list grammar_spec
+
+    8 grammar_spec: GRAMMAR_SPEC_TAG LEFT_BRC grammar_spec_block RIGHT_BRC
+
+    9 grammar_spec_block: ε
+   10                   | grammar_spec_tokens grammar_spec_rules
+
+   11 grammar_spec_tokens: TOKENS_KW LEFT_BRC RIGHT_BRC
+   12                    | TOKENS_KW LEFT_BRC grammar_spec_token_list RIGHT_BRC
+
+   13 grammar_spec_token_list: grammar_spec_token_list_item
+   14                        | grammar_spec_token_list grammar_spec_token_list_item
+
+   15 grammar_spec_token_list_item: IDENTIFIER EQUAL TOKEN_REGEX
+
+   16 grammar_spec_rules: RULES_KW LEFT_BRC RIGHT_BRC
+   17                   | RULES_KW LEFT_BRC grammar_spec_rule_list RIGHT_BRC
+
+   18 grammar_spec_rule_list: grammar_spec_rule_list_item
+   19                       | grammar_spec_rule_list grammar_spec_rule_list_item
+
+   20 grammar_spec_rule_list_item: IDENTIFIER EQUAL grammar_rule_option_list
+
+   21 grammar_rule_option_list: grammar_rule_option
+   22                         | grammar_rule_option_list "|" grammar_rule_option
+
+   23 grammar_rule_option: IDENTIFIER
+   24                    | grammar_rule_option IDENTIFIER
+
+   25 any_token: RAW_TOKEN
+   26          | EQUAL
+   27          | LEFT_BRC
+   28          | RIGHT_BRC
+   29          | TOKENS_KW
+   30          | RULES_KW
+   31          | IDENTIFIER
+
+
+Terminals, with rules where they appear
+
+    END (0) 0 1
+    error (256)
+    ROOT (258)
+    EQUAL (259) 15 20 26
+    LEFT_BRC (260) 8 11 12 16 17 27
+    RIGHT_BRC (261) 8 11 12 16 17 28
+    TOKENS_KW (262) 11 12 29
+    RULES_KW (263) 16 17 30
+    TOKEN_REGEX <std::string> (264) 15
+    GRAMMAR_SPEC_TAG <std::string> (265) 8
+    GRAMMAR_TAG <std::string> (266) 3 6
+    IDENTIFIER <std::string> (267) 15 20 23 24 31
+    RAW_TOKEN <std::string> (268) 25
+    "|" (269) 22
+
+
+Nonterminals, with rules where they appear
+
+    $accept (15)
+        on left: 0
+    root (16)
+        on left: 1
+        on right: 0
+    token_list (17)
+        on left: 2 3 4 5 6 7
+        on right: 1 5 6 7
+    grammar_spec (18)
+        on left: 8
+        on right: 4 7
+    grammar_spec_block (19)
+        on left: 9 10
+        on right: 8
+    grammar_spec_tokens (20)
+        on left: 11 12
+        on right: 10
+    grammar_spec_token_list (21)
+        on left: 13 14
+        on right: 12 14
+    grammar_spec_token_list_item (22)
+        on left: 15
+        on right: 13 14
+    grammar_spec_rules (23)
+        on left: 16 17
+        on right: 10
+    grammar_spec_rule_list (24)
+        on left: 18 19
+        on right: 17 19
+    grammar_spec_rule_list_item (25)
+        on left: 20
+        on right: 18 19
+    grammar_rule_option_list (26)
+        on left: 21 22
+        on right: 20 22
+    grammar_rule_option (27)
+        on left: 23 24
+        on right: 21 22 24
+    any_token <std::string> (28)
+        on left: 25 26 27 28 29 30 31
+        on right: 2 5
+
+
+State 0
+
+    0 $accept: • root END
+
+    EQUAL             shift, and go to state 1
+    LEFT_BRC          shift, and go to state 2
+    RIGHT_BRC         shift, and go to state 3
+    TOKENS_KW         shift, and go to state 4
+    RULES_KW          shift, and go to state 5
+    GRAMMAR_SPEC_TAG  shift, and go to state 6
+    GRAMMAR_TAG       shift, and go to state 7
+    IDENTIFIER        shift, and go to state 8
+    RAW_TOKEN         shift, and go to state 9
+
+    root          go to state 10
+    token_list    go to state 11
+    grammar_spec  go to state 12
+    any_token     go to state 13
+
+
+State 1
+
+   26 any_token: EQUAL •
+
+    $default  reduce using rule 26 (any_token)
+
+
+State 2
+
+   27 any_token: LEFT_BRC •
+
+    $default  reduce using rule 27 (any_token)
+
+
+State 3
+
+   28 any_token: RIGHT_BRC •
+
+    $default  reduce using rule 28 (any_token)
+
+
+State 4
+
+   29 any_token: TOKENS_KW •
+
+    $default  reduce using rule 29 (any_token)
+
+
+State 5
+
+   30 any_token: RULES_KW •
+
+    $default  reduce using rule 30 (any_token)
+
+
+State 6
+
+    8 grammar_spec: GRAMMAR_SPEC_TAG • LEFT_BRC grammar_spec_block RIGHT_BRC
+
+    LEFT_BRC  shift, and go to state 14
+
+
+State 7
+
+    3 token_list: GRAMMAR_TAG •
+
+    $default  reduce using rule 3 (token_list)
+
+
+State 8
+
+   31 any_token: IDENTIFIER •
+
+    $default  reduce using rule 31 (any_token)
+
+
+State 9
+
+   25 any_token: RAW_TOKEN •
+
+    $default  reduce using rule 25 (any_token)
+
+
+State 10
+
+    0 $accept: root • END
+
+    END  shift, and go to state 15
+
+
+State 11
+
+    1 root: token_list • END
+    5 token_list: token_list • any_token
+    6           | token_list • GRAMMAR_TAG
+    7           | token_list • grammar_spec
+
+    END               shift, and go to state 16
+    EQUAL             shift, and go to state 1
+    LEFT_BRC          shift, and go to state 2
+    RIGHT_BRC         shift, and go to state 3
+    TOKENS_KW         shift, and go to state 4
+    RULES_KW          shift, and go to state 5
+    GRAMMAR_SPEC_TAG  shift, and go to state 6
+    GRAMMAR_TAG       shift, and go to state 17
+    IDENTIFIER        shift, and go to state 8
+    RAW_TOKEN         shift, and go to state 9
+
+    grammar_spec  go to state 18
+    any_token     go to state 19
+
+
+State 12
+
+    4 token_list: grammar_spec •
+
+    $default  reduce using rule 4 (token_list)
+
+
+State 13
+
+    2 token_list: any_token •
+
+    $default  reduce using rule 2 (token_list)
+
+
+State 14
+
+    8 grammar_spec: GRAMMAR_SPEC_TAG LEFT_BRC • grammar_spec_block RIGHT_BRC
+
+    TOKENS_KW  shift, and go to state 20
+
+    $default  reduce using rule 9 (grammar_spec_block)
+
+    grammar_spec_block   go to state 21
+    grammar_spec_tokens  go to state 22
+
+
+State 15
+
+    0 $accept: root END •
+
+    $default  accept
+
+
+State 16
+
+    1 root: token_list END •
+
+    $default  reduce using rule 1 (root)
+
+
+State 17
+
+    6 token_list: token_list GRAMMAR_TAG •
+
+    $default  reduce using rule 6 (token_list)
+
+
+State 18
+
+    7 token_list: token_list grammar_spec •
+
+    $default  reduce using rule 7 (token_list)
+
+
+State 19
+
+    5 token_list: token_list any_token •
+
+    $default  reduce using rule 5 (token_list)
+
+
+State 20
+
+   11 grammar_spec_tokens: TOKENS_KW • LEFT_BRC RIGHT_BRC
+   12                    | TOKENS_KW • LEFT_BRC grammar_spec_token_list RIGHT_BRC
+
+    LEFT_BRC  shift, and go to state 23
+
+
+State 21
+
+    8 grammar_spec: GRAMMAR_SPEC_TAG LEFT_BRC grammar_spec_block • RIGHT_BRC
+
+    RIGHT_BRC  shift, and go to state 24
+
+
+State 22
+
+   10 grammar_spec_block: grammar_spec_tokens • grammar_spec_rules
+
+    RULES_KW  shift, and go to state 25
+
+    grammar_spec_rules  go to state 26
+
+
+State 23
+
+   11 grammar_spec_tokens: TOKENS_KW LEFT_BRC • RIGHT_BRC
+   12                    | TOKENS_KW LEFT_BRC • grammar_spec_token_list RIGHT_BRC
+
+    RIGHT_BRC   shift, and go to state 27
+    IDENTIFIER  shift, and go to state 28
+
+    grammar_spec_token_list       go to state 29
+    grammar_spec_token_list_item  go to state 30
+
+
+State 24
+
+    8 grammar_spec: GRAMMAR_SPEC_TAG LEFT_BRC grammar_spec_block RIGHT_BRC •
+
+    $default  reduce using rule 8 (grammar_spec)
+
+
+State 25
+
+   16 grammar_spec_rules: RULES_KW • LEFT_BRC RIGHT_BRC
+   17                   | RULES_KW • LEFT_BRC grammar_spec_rule_list RIGHT_BRC
+
+    LEFT_BRC  shift, and go to state 31
+
+
+State 26
+
+   10 grammar_spec_block: grammar_spec_tokens grammar_spec_rules •
+
+    $default  reduce using rule 10 (grammar_spec_block)
+
+
+State 27
+
+   11 grammar_spec_tokens: TOKENS_KW LEFT_BRC RIGHT_BRC •
+
+    $default  reduce using rule 11 (grammar_spec_tokens)
+
+
+State 28
+
+   15 grammar_spec_token_list_item: IDENTIFIER • EQUAL TOKEN_REGEX
+
+    EQUAL  shift, and go to state 32
+
+
+State 29
+
+   12 grammar_spec_tokens: TOKENS_KW LEFT_BRC grammar_spec_token_list • RIGHT_BRC
+   14 grammar_spec_token_list: grammar_spec_token_list • grammar_spec_token_list_item
+
+    RIGHT_BRC   shift, and go to state 33
+    IDENTIFIER  shift, and go to state 28
+
+    grammar_spec_token_list_item  go to state 34
+
+
+State 30
+
+   13 grammar_spec_token_list: grammar_spec_token_list_item •
+
+    $default  reduce using rule 13 (grammar_spec_token_list)
+
+
+State 31
+
+   16 grammar_spec_rules: RULES_KW LEFT_BRC • RIGHT_BRC
+   17                   | RULES_KW LEFT_BRC • grammar_spec_rule_list RIGHT_BRC
+
+    RIGHT_BRC   shift, and go to state 35
+    IDENTIFIER  shift, and go to state 36
+
+    grammar_spec_rule_list       go to state 37
+    grammar_spec_rule_list_item  go to state 38
+
+
+State 32
+
+   15 grammar_spec_token_list_item: IDENTIFIER EQUAL • TOKEN_REGEX
+
+    TOKEN_REGEX  shift, and go to state 39
+
+
+State 33
+
+   12 grammar_spec_tokens: TOKENS_KW LEFT_BRC grammar_spec_token_list RIGHT_BRC •
+
+    $default  reduce using rule 12 (grammar_spec_tokens)
+
+
+State 34
+
+   14 grammar_spec_token_list: grammar_spec_token_list grammar_spec_token_list_item •
+
+    $default  reduce using rule 14 (grammar_spec_token_list)
+
+
+State 35
+
+   16 grammar_spec_rules: RULES_KW LEFT_BRC RIGHT_BRC •
+
+    $default  reduce using rule 16 (grammar_spec_rules)
+
+
+State 36
+
+   20 grammar_spec_rule_list_item: IDENTIFIER • EQUAL grammar_rule_option_list
+
+    EQUAL  shift, and go to state 40
+
+
+State 37
+
+   17 grammar_spec_rules: RULES_KW LEFT_BRC grammar_spec_rule_list • RIGHT_BRC
+   19 grammar_spec_rule_list: grammar_spec_rule_list • grammar_spec_rule_list_item
+
+    RIGHT_BRC   shift, and go to state 41
+    IDENTIFIER  shift, and go to state 36
+
+    grammar_spec_rule_list_item  go to state 42
+
+
+State 38
+
+   18 grammar_spec_rule_list: grammar_spec_rule_list_item •
+
+    $default  reduce using rule 18 (grammar_spec_rule_list)
+
+
+State 39
+
+   15 grammar_spec_token_list_item: IDENTIFIER EQUAL TOKEN_REGEX •
+
+    $default  reduce using rule 15 (grammar_spec_token_list_item)
+
+
+State 40
+
+   20 grammar_spec_rule_list_item: IDENTIFIER EQUAL • grammar_rule_option_list
+
+    IDENTIFIER  shift, and go to state 43
+
+    grammar_rule_option_list  go to state 44
+    grammar_rule_option       go to state 45
+
+
+State 41
+
+   17 grammar_spec_rules: RULES_KW LEFT_BRC grammar_spec_rule_list RIGHT_BRC •
+
+    $default  reduce using rule 17 (grammar_spec_rules)
+
+
+State 42
+
+   19 grammar_spec_rule_list: grammar_spec_rule_list grammar_spec_rule_list_item •
+
+    $default  reduce using rule 19 (grammar_spec_rule_list)
+
+
+State 43
+
+   23 grammar_rule_option: IDENTIFIER •
+
+    $default  reduce using rule 23 (grammar_rule_option)
+
+
+State 44
+
+   20 grammar_spec_rule_list_item: IDENTIFIER EQUAL grammar_rule_option_list •
+   22 grammar_rule_option_list: grammar_rule_option_list • "|" grammar_rule_option
+
+    "|"  shift, and go to state 46
+
+    $default  reduce using rule 20 (grammar_spec_rule_list_item)
+
+
+State 45
+
+   21 grammar_rule_option_list: grammar_rule_option •
+   24 grammar_rule_option: grammar_rule_option • IDENTIFIER
+
+    IDENTIFIER  shift, and go to state 47
+
+    IDENTIFIER  [reduce using rule 21 (grammar_rule_option_list)]
+    $default    reduce using rule 21 (grammar_rule_option_list)
+
+
+State 46
+
+   22 grammar_rule_option_list: grammar_rule_option_list "|" • grammar_rule_option
+
+    IDENTIFIER  shift, and go to state 43
+
+    grammar_rule_option  go to state 48
+
+
+State 47
+
+   24 grammar_rule_option: grammar_rule_option IDENTIFIER •
+
+    $default  reduce using rule 24 (grammar_rule_option)
+
+
+State 48
+
+   22 grammar_rule_option_list: grammar_rule_option_list "|" grammar_rule_option •
+   24 grammar_rule_option: grammar_rule_option • IDENTIFIER
+
+    IDENTIFIER  shift, and go to state 47
+
+    IDENTIFIER  [reduce using rule 22 (grammar_rule_option_list)]
+    $default    reduce using rule 22 (grammar_rule_option_list)

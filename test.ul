@@ -1,0 +1,17 @@
+int a = 2;
+#[grammar: assign-gr] {
+    tokens {
+        NUM = /[0-9]+/
+        ASSIGN = /->/
+        ID = /[-a-zA-Z]+/
+    }
+    rules {
+        root = NUM ASSIGN ID
+    }
+}
+
+int tokens = 34;
+
+[assign-gr]
+
+5 -> asdf
