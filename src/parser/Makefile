@@ -13,7 +13,7 @@ $(BUILD_DIR)/lexer.hpp $(BUILD_DIR)/lexer.cpp: lexer.l
 	flex --header-file=$(BUILD_DIR)/lexer.hpp -o $(BUILD_DIR)/lexer.cpp lexer.l
 
 $(BUILD_DIR)/parser.hpp $(BUILD_DIR)/parser.cpp: parser.y
-	bison -L C++ -d -v -o $(BUILD_DIR)/parser.cpp parser.y
+	bison -L C++ -d -v -o $(BUILD_DIR)/parser.cpp parser.y  # -Wcounterexamples
 
 clean:
 	rm -rvf $(BUILD_DIR)/*

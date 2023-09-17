@@ -42,7 +42,7 @@
 
 
 // Unqualified %code blocks.
-#line 18 "parser.y"
+#line 21 "parser.y"
 
 yy::parser::symbol_type yylex(void* yyscanner, yy::location& loc, parser_ctx_t& ctx);
     #include "lexer.hpp"
@@ -209,13 +209,43 @@ namespace yy {
   {
     switch (that.kind ())
     {
+      case symbol_kind::S_grammar_spec_rule_list_item: // grammar_spec_rule_list_item
+        value.YY_MOVE_OR_COPY< std::pair<std::string, ulang_grammar::grammar_rule> > (YY_MOVE (that.value));
+        break;
+
+      case symbol_kind::S_grammar_spec_token_list_item: // grammar_spec_token_list_item
+        value.YY_MOVE_OR_COPY< std::pair<std::string, ulang_grammar::token_rule> > (YY_MOVE (that.value));
+        break;
+
       case symbol_kind::S_TOKEN_REGEX: // TOKEN_REGEX
       case symbol_kind::S_GRAMMAR_SPEC_TAG: // GRAMMAR_SPEC_TAG
       case symbol_kind::S_GRAMMAR_TAG: // GRAMMAR_TAG
       case symbol_kind::S_IDENTIFIER: // IDENTIFIER
       case symbol_kind::S_RAW_TOKEN: // RAW_TOKEN
+      case symbol_kind::S_grammar_rule_node_pattern: // grammar_rule_node_pattern
+      case symbol_kind::S_grammar_rule_node_pattern_token_list: // grammar_rule_node_pattern_token_list
       case symbol_kind::S_any_token: // any_token
         value.YY_MOVE_OR_COPY< std::string > (YY_MOVE (that.value));
+        break;
+
+      case symbol_kind::S_grammar_spec_rules: // grammar_spec_rules
+      case symbol_kind::S_grammar_spec_rule_list: // grammar_spec_rule_list
+        value.YY_MOVE_OR_COPY< std::unordered_map<std::string, ulang_grammar::grammar_rule> > (YY_MOVE (that.value));
+        break;
+
+      case symbol_kind::S_grammar_spec_tokens: // grammar_spec_tokens
+      case symbol_kind::S_grammar_spec_token_list: // grammar_spec_token_list
+        value.YY_MOVE_OR_COPY< std::unordered_map<std::string, ulang_grammar::token_rule> > (YY_MOVE (that.value));
+        break;
+
+      case symbol_kind::S_grammar_spec: // grammar_spec
+      case symbol_kind::S_grammar_spec_block: // grammar_spec_block
+        value.YY_MOVE_OR_COPY< ulang_grammar > (YY_MOVE (that.value));
+        break;
+
+      case symbol_kind::S_grammar_rule_option_list: // grammar_rule_option_list
+      case symbol_kind::S_grammar_rule_node: // grammar_rule_node
+        value.YY_MOVE_OR_COPY< ulang_grammar::non_terminal_node > (YY_MOVE (that.value));
         break;
 
       default:
@@ -233,13 +263,43 @@ namespace yy {
   {
     switch (that.kind ())
     {
+      case symbol_kind::S_grammar_spec_rule_list_item: // grammar_spec_rule_list_item
+        value.move< std::pair<std::string, ulang_grammar::grammar_rule> > (YY_MOVE (that.value));
+        break;
+
+      case symbol_kind::S_grammar_spec_token_list_item: // grammar_spec_token_list_item
+        value.move< std::pair<std::string, ulang_grammar::token_rule> > (YY_MOVE (that.value));
+        break;
+
       case symbol_kind::S_TOKEN_REGEX: // TOKEN_REGEX
       case symbol_kind::S_GRAMMAR_SPEC_TAG: // GRAMMAR_SPEC_TAG
       case symbol_kind::S_GRAMMAR_TAG: // GRAMMAR_TAG
       case symbol_kind::S_IDENTIFIER: // IDENTIFIER
       case symbol_kind::S_RAW_TOKEN: // RAW_TOKEN
+      case symbol_kind::S_grammar_rule_node_pattern: // grammar_rule_node_pattern
+      case symbol_kind::S_grammar_rule_node_pattern_token_list: // grammar_rule_node_pattern_token_list
       case symbol_kind::S_any_token: // any_token
         value.move< std::string > (YY_MOVE (that.value));
+        break;
+
+      case symbol_kind::S_grammar_spec_rules: // grammar_spec_rules
+      case symbol_kind::S_grammar_spec_rule_list: // grammar_spec_rule_list
+        value.move< std::unordered_map<std::string, ulang_grammar::grammar_rule> > (YY_MOVE (that.value));
+        break;
+
+      case symbol_kind::S_grammar_spec_tokens: // grammar_spec_tokens
+      case symbol_kind::S_grammar_spec_token_list: // grammar_spec_token_list
+        value.move< std::unordered_map<std::string, ulang_grammar::token_rule> > (YY_MOVE (that.value));
+        break;
+
+      case symbol_kind::S_grammar_spec: // grammar_spec
+      case symbol_kind::S_grammar_spec_block: // grammar_spec_block
+        value.move< ulang_grammar > (YY_MOVE (that.value));
+        break;
+
+      case symbol_kind::S_grammar_rule_option_list: // grammar_rule_option_list
+      case symbol_kind::S_grammar_rule_node: // grammar_rule_node
+        value.move< ulang_grammar::non_terminal_node > (YY_MOVE (that.value));
         break;
 
       default:
@@ -257,13 +317,43 @@ namespace yy {
     state = that.state;
     switch (that.kind ())
     {
+      case symbol_kind::S_grammar_spec_rule_list_item: // grammar_spec_rule_list_item
+        value.copy< std::pair<std::string, ulang_grammar::grammar_rule> > (that.value);
+        break;
+
+      case symbol_kind::S_grammar_spec_token_list_item: // grammar_spec_token_list_item
+        value.copy< std::pair<std::string, ulang_grammar::token_rule> > (that.value);
+        break;
+
       case symbol_kind::S_TOKEN_REGEX: // TOKEN_REGEX
       case symbol_kind::S_GRAMMAR_SPEC_TAG: // GRAMMAR_SPEC_TAG
       case symbol_kind::S_GRAMMAR_TAG: // GRAMMAR_TAG
       case symbol_kind::S_IDENTIFIER: // IDENTIFIER
       case symbol_kind::S_RAW_TOKEN: // RAW_TOKEN
+      case symbol_kind::S_grammar_rule_node_pattern: // grammar_rule_node_pattern
+      case symbol_kind::S_grammar_rule_node_pattern_token_list: // grammar_rule_node_pattern_token_list
       case symbol_kind::S_any_token: // any_token
         value.copy< std::string > (that.value);
+        break;
+
+      case symbol_kind::S_grammar_spec_rules: // grammar_spec_rules
+      case symbol_kind::S_grammar_spec_rule_list: // grammar_spec_rule_list
+        value.copy< std::unordered_map<std::string, ulang_grammar::grammar_rule> > (that.value);
+        break;
+
+      case symbol_kind::S_grammar_spec_tokens: // grammar_spec_tokens
+      case symbol_kind::S_grammar_spec_token_list: // grammar_spec_token_list
+        value.copy< std::unordered_map<std::string, ulang_grammar::token_rule> > (that.value);
+        break;
+
+      case symbol_kind::S_grammar_spec: // grammar_spec
+      case symbol_kind::S_grammar_spec_block: // grammar_spec_block
+        value.copy< ulang_grammar > (that.value);
+        break;
+
+      case symbol_kind::S_grammar_rule_option_list: // grammar_rule_option_list
+      case symbol_kind::S_grammar_rule_node: // grammar_rule_node
+        value.copy< ulang_grammar::non_terminal_node > (that.value);
         break;
 
       default:
@@ -280,13 +370,43 @@ namespace yy {
     state = that.state;
     switch (that.kind ())
     {
+      case symbol_kind::S_grammar_spec_rule_list_item: // grammar_spec_rule_list_item
+        value.move< std::pair<std::string, ulang_grammar::grammar_rule> > (that.value);
+        break;
+
+      case symbol_kind::S_grammar_spec_token_list_item: // grammar_spec_token_list_item
+        value.move< std::pair<std::string, ulang_grammar::token_rule> > (that.value);
+        break;
+
       case symbol_kind::S_TOKEN_REGEX: // TOKEN_REGEX
       case symbol_kind::S_GRAMMAR_SPEC_TAG: // GRAMMAR_SPEC_TAG
       case symbol_kind::S_GRAMMAR_TAG: // GRAMMAR_TAG
       case symbol_kind::S_IDENTIFIER: // IDENTIFIER
       case symbol_kind::S_RAW_TOKEN: // RAW_TOKEN
+      case symbol_kind::S_grammar_rule_node_pattern: // grammar_rule_node_pattern
+      case symbol_kind::S_grammar_rule_node_pattern_token_list: // grammar_rule_node_pattern_token_list
       case symbol_kind::S_any_token: // any_token
         value.move< std::string > (that.value);
+        break;
+
+      case symbol_kind::S_grammar_spec_rules: // grammar_spec_rules
+      case symbol_kind::S_grammar_spec_rule_list: // grammar_spec_rule_list
+        value.move< std::unordered_map<std::string, ulang_grammar::grammar_rule> > (that.value);
+        break;
+
+      case symbol_kind::S_grammar_spec_tokens: // grammar_spec_tokens
+      case symbol_kind::S_grammar_spec_token_list: // grammar_spec_token_list
+        value.move< std::unordered_map<std::string, ulang_grammar::token_rule> > (that.value);
+        break;
+
+      case symbol_kind::S_grammar_spec: // grammar_spec
+      case symbol_kind::S_grammar_spec_block: // grammar_spec_block
+        value.move< ulang_grammar > (that.value);
+        break;
+
+      case symbol_kind::S_grammar_rule_option_list: // grammar_rule_option_list
+      case symbol_kind::S_grammar_rule_node: // grammar_rule_node
+        value.move< ulang_grammar::non_terminal_node > (that.value);
         break;
 
       default:
@@ -548,13 +668,43 @@ namespace yy {
          when using variants.  */
       switch (yyr1_[yyn])
     {
+      case symbol_kind::S_grammar_spec_rule_list_item: // grammar_spec_rule_list_item
+        yylhs.value.emplace< std::pair<std::string, ulang_grammar::grammar_rule> > ();
+        break;
+
+      case symbol_kind::S_grammar_spec_token_list_item: // grammar_spec_token_list_item
+        yylhs.value.emplace< std::pair<std::string, ulang_grammar::token_rule> > ();
+        break;
+
       case symbol_kind::S_TOKEN_REGEX: // TOKEN_REGEX
       case symbol_kind::S_GRAMMAR_SPEC_TAG: // GRAMMAR_SPEC_TAG
       case symbol_kind::S_GRAMMAR_TAG: // GRAMMAR_TAG
       case symbol_kind::S_IDENTIFIER: // IDENTIFIER
       case symbol_kind::S_RAW_TOKEN: // RAW_TOKEN
+      case symbol_kind::S_grammar_rule_node_pattern: // grammar_rule_node_pattern
+      case symbol_kind::S_grammar_rule_node_pattern_token_list: // grammar_rule_node_pattern_token_list
       case symbol_kind::S_any_token: // any_token
         yylhs.value.emplace< std::string > ();
+        break;
+
+      case symbol_kind::S_grammar_spec_rules: // grammar_spec_rules
+      case symbol_kind::S_grammar_spec_rule_list: // grammar_spec_rule_list
+        yylhs.value.emplace< std::unordered_map<std::string, ulang_grammar::grammar_rule> > ();
+        break;
+
+      case symbol_kind::S_grammar_spec_tokens: // grammar_spec_tokens
+      case symbol_kind::S_grammar_spec_token_list: // grammar_spec_token_list
+        yylhs.value.emplace< std::unordered_map<std::string, ulang_grammar::token_rule> > ();
+        break;
+
+      case symbol_kind::S_grammar_spec: // grammar_spec
+      case symbol_kind::S_grammar_spec_block: // grammar_spec_block
+        yylhs.value.emplace< ulang_grammar > ();
+        break;
+
+      case symbol_kind::S_grammar_rule_option_list: // grammar_rule_option_list
+      case symbol_kind::S_grammar_rule_node: // grammar_rule_node
+        yylhs.value.emplace< ulang_grammar::non_terminal_node > ();
         break;
 
       default:
@@ -578,97 +728,271 @@ namespace yy {
           switch (yyn)
             {
   case 2: // root: token_list END
-#line 47 "parser.y"
-                     { printf("SOMETHING\n\r"); }
-#line 584 "build/parser.cpp"
+#line 74 "parser.y"
+                     { }
+#line 734 "build/parser.cpp"
     break;
 
   case 3: // token_list: any_token
-#line 49 "parser.y"
-                     { ctx.current_grammar.top().feed_raw_token(yystack_[0].value.as < std::string > ()); ctx.token_list.push_back({.str = yystack_[0].value.as < std::string > ()}); }
-#line 590 "build/parser.cpp"
+#line 76 "parser.y"
+                     { /*ctx.current_grammar.top().add_token($1); ctx.token_list.push_back({.str = $1});*/ }
+#line 740 "build/parser.cpp"
     break;
 
-  case 4: // token_list: GRAMMAR_TAG
-#line 50 "parser.y"
-                     { ctx.push_grammar_ctx(yystack_[0].value.as < std::string > ()); }
-#line 596 "build/parser.cpp"
-    break;
-
-  case 5: // token_list: grammar_spec
-#line 51 "parser.y"
-                      { printf("GRAMMAR\n\r"); }
-#line 602 "build/parser.cpp"
+  case 4: // token_list: grammar_spec
+#line 77 "parser.y"
+                      { ctx.grammars[yystack_[0].value.as < ulang_grammar > ().name] = yystack_[0].value.as < ulang_grammar > (); }
+#line 746 "build/parser.cpp"
     break;
 
   case 6: // token_list: token_list any_token
-#line 52 "parser.y"
-                              { ctx.current_grammar.top().feed_raw_token(yystack_[0].value.as < std::string > ()); ctx.token_list.push_back({.str = yystack_[0].value.as < std::string > ()}); }
-#line 608 "build/parser.cpp"
-    break;
-
-  case 7: // token_list: token_list GRAMMAR_TAG
-#line 53 "parser.y"
-                                { ctx.push_grammar_ctx(yystack_[0].value.as < std::string > ()); }
-#line 614 "build/parser.cpp"
-    break;
-
-  case 8: // token_list: token_list grammar_spec
-#line 54 "parser.y"
-                                 { printf("GRAMMAR\n\r"); }
-#line 620 "build/parser.cpp"
-    break;
-
-  case 9: // grammar_spec: GRAMMAR_SPEC_TAG LEFT_BRC grammar_spec_block RIGHT_BRC
-#line 56 "parser.y"
-                                                                     { printf("GRAMMAR SPEC: %s\n\r", yystack_[3].value.as < std::string > ().c_str()); }
-#line 626 "build/parser.cpp"
-    break;
-
-  case 26: // any_token: RAW_TOKEN
-#line 77 "parser.y"
-                     { yylhs.value.as < std::string > () = yystack_[0].value.as < std::string > (); }
-#line 632 "build/parser.cpp"
-    break;
-
-  case 27: // any_token: EQUAL
-#line 78 "parser.y"
-                { yylhs.value.as < std::string > () = "="; }
-#line 638 "build/parser.cpp"
-    break;
-
-  case 28: // any_token: LEFT_BRC
 #line 79 "parser.y"
-                   { yylhs.value.as < std::string > () = "{"; }
-#line 644 "build/parser.cpp"
+                              { /*ctx.current_grammar.top().add_token($2); ctx.token_list.push_back({.str = $2});*/ }
+#line 752 "build/parser.cpp"
     break;
 
-  case 29: // any_token: RIGHT_BRC
+  case 7: // token_list: token_list grammar_spec
 #line 80 "parser.y"
-                    { yylhs.value.as < std::string > () = "}"; }
-#line 650 "build/parser.cpp"
+                                 { ctx.grammars[yystack_[0].value.as < ulang_grammar > ().name] = yystack_[0].value.as < ulang_grammar > (); }
+#line 758 "build/parser.cpp"
     break;
 
-  case 30: // any_token: TOKENS_KW
-#line 81 "parser.y"
-                    { yylhs.value.as < std::string > () = "tokens"; }
-#line 656 "build/parser.cpp"
-    break;
-
-  case 31: // any_token: RULES_KW
-#line 82 "parser.y"
-                   { yylhs.value.as < std::string > () = "rules"; }
-#line 662 "build/parser.cpp"
-    break;
-
-  case 32: // any_token: IDENTIFIER
+  case 9: // grammar_block: grammar_tag token_list RIGHT_BRK
 #line 83 "parser.y"
+                                                { ctx.pop_grammar_ctx(LOC_OF(2), yy::location(LOC_OF(3).begin, LOC_OF(1).end)); }
+#line 764 "build/parser.cpp"
+    break;
+
+  case 10: // grammar_tag: GRAMMAR_TAG
+#line 84 "parser.y"
+                         { ctx.push_grammar_ctx(parser_ctx_t::get_grammar_tag_id(yystack_[0].value.as < std::string > ())); }
+#line 770 "build/parser.cpp"
+    break;
+
+  case 11: // grammar_spec: GRAMMAR_SPEC_TAG LEFT_BRC grammar_spec_block RIGHT_BRC
+#line 86 "parser.y"
+                                                                     { ctx.current_grammar.top().substitutions.emplace_front(yy::location(LOC_OF(4).begin, LOC_OF(1).end), "");yystack_[1].value.as < ulang_grammar > ().name = parser_ctx_t::get_grammar_id(yystack_[3].value.as < std::string > ()); yylhs.value.as < ulang_grammar > () = yystack_[1].value.as < ulang_grammar > (); }
+#line 776 "build/parser.cpp"
+    break;
+
+  case 12: // grammar_spec_block: grammar_spec_tokens grammar_spec_rules
+#line 87 "parser.y"
+                                                          {yylhs.value.as < ulang_grammar > ()={.token_rules=yystack_[1].value.as < std::unordered_map<std::string, ulang_grammar::token_rule> > (), .grammar_rules=yystack_[0].value.as < std::unordered_map<std::string, ulang_grammar::grammar_rule> > ()}; }
+#line 782 "build/parser.cpp"
+    break;
+
+  case 13: // grammar_spec_tokens: TOKENS_KW LEFT_BRC grammar_spec_token_list RIGHT_BRC
+#line 89 "parser.y"
+                                                                         {yylhs.value.as < std::unordered_map<std::string, ulang_grammar::token_rule> > () = yystack_[1].value.as < std::unordered_map<std::string, ulang_grammar::token_rule> > ();}
+#line 788 "build/parser.cpp"
+    break;
+
+  case 14: // grammar_spec_token_list: %empty
+#line 90 "parser.y"
+                               {yylhs.value.as < std::unordered_map<std::string, ulang_grammar::token_rule> > () = {};}
+#line 794 "build/parser.cpp"
+    break;
+
+  case 15: // grammar_spec_token_list: grammar_spec_token_list grammar_spec_token_list_item
+#line 91 "parser.y"
+                                                              {yystack_[1].value.as < std::unordered_map<std::string, ulang_grammar::token_rule> > ()[yystack_[0].value.as < std::pair<std::string, ulang_grammar::token_rule> > ().first] = yystack_[0].value.as < std::pair<std::string, ulang_grammar::token_rule> > ().second; yylhs.value.as < std::unordered_map<std::string, ulang_grammar::token_rule> > ()=yystack_[1].value.as < std::unordered_map<std::string, ulang_grammar::token_rule> > ();}
+#line 800 "build/parser.cpp"
+    break;
+
+  case 16: // grammar_spec_token_list_item: IDENTIFIER EQUAL TOKEN_REGEX
+#line 92 "parser.y"
+                                                           {yylhs.value.as < std::pair<std::string, ulang_grammar::token_rule> > ()=std::make_pair(yystack_[2].value.as < std::string > (), ulang_grammar::token_rule{.regex = std::regex(yystack_[0].value.as < std::string > ().substr(1, yystack_[0].value.as < std::string > ().size()-2), std::regex_constants::ECMAScript)});}
+#line 806 "build/parser.cpp"
+    break;
+
+  case 17: // grammar_spec_rules: RULES_KW LEFT_BRC grammar_spec_rule_list RIGHT_BRC
+#line 94 "parser.y"
+                                                                       {yylhs.value.as < std::unordered_map<std::string, ulang_grammar::grammar_rule> > () = yystack_[1].value.as < std::unordered_map<std::string, ulang_grammar::grammar_rule> > ();}
+#line 812 "build/parser.cpp"
+    break;
+
+  case 18: // grammar_spec_rule_list: %empty
+#line 95 "parser.y"
+                              {yylhs.value.as < std::unordered_map<std::string, ulang_grammar::grammar_rule> > () = {};}
+#line 818 "build/parser.cpp"
+    break;
+
+  case 19: // grammar_spec_rule_list: grammar_spec_rule_list grammar_spec_rule_list_item
+#line 96 "parser.y"
+                                                             {yystack_[1].value.as < std::unordered_map<std::string, ulang_grammar::grammar_rule> > ()[yystack_[0].value.as < std::pair<std::string, ulang_grammar::grammar_rule> > ().first] = yystack_[0].value.as < std::pair<std::string, ulang_grammar::grammar_rule> > ().second; yylhs.value.as < std::unordered_map<std::string, ulang_grammar::grammar_rule> > ()=yystack_[1].value.as < std::unordered_map<std::string, ulang_grammar::grammar_rule> > ();}
+#line 824 "build/parser.cpp"
+    break;
+
+  case 20: // grammar_spec_rule_list_item: IDENTIFIER EQUAL grammar_rule_option_list SEMICOLON
+#line 97 "parser.y"
+                                                                                 {yylhs.value.as < std::pair<std::string, ulang_grammar::grammar_rule> > ()=std::make_pair(yystack_[3].value.as < std::string > (), ulang_grammar::grammar_rule{.root_item = yystack_[1].value.as < ulang_grammar::non_terminal_node > ()});}
+#line 830 "build/parser.cpp"
+    break;
+
+  case 21: // grammar_rule_option_list: grammar_rule_node
+#line 99 "parser.y"
+                                           {yylhs.value.as < ulang_grammar::non_terminal_node > ()={.type = ulang_grammar::non_terminal_node::SUB_OPTIONS, .sub_nodes = {yystack_[0].value.as < ulang_grammar::non_terminal_node > ()}};}
+#line 836 "build/parser.cpp"
+    break;
+
+  case 22: // grammar_rule_option_list: grammar_rule_option_list PIPE grammar_rule_node
+#line 100 "parser.y"
+                                                         {yystack_[2].value.as < ulang_grammar::non_terminal_node > ().sub_nodes.push_back(yystack_[0].value.as < ulang_grammar::non_terminal_node > ()); yylhs.value.as < ulang_grammar::non_terminal_node > ()=yystack_[2].value.as < ulang_grammar::non_terminal_node > ();}
+#line 842 "build/parser.cpp"
+    break;
+
+  case 23: // grammar_rule_option_list: grammar_rule_option_list grammar_rule_node_pattern
+#line 101 "parser.y"
+                                                            {/*printf("=====>(%lu) %s\n\r", $1.sub_nodes.size(), $2.c_str());*/yystack_[1].value.as < ulang_grammar::non_terminal_node > ().sub_nodes.back().pattern = yystack_[0].value.as < std::string > (); yylhs.value.as < ulang_grammar::non_terminal_node > ()=yystack_[1].value.as < ulang_grammar::non_terminal_node > ();}
+#line 848 "build/parser.cpp"
+    break;
+
+  case 24: // grammar_rule_node: IDENTIFIER
+#line 104 "parser.y"
+                             {yylhs.value.as < ulang_grammar::non_terminal_node > ()={.type = ulang_grammar::non_terminal_node::SUB_NODES, .sub_nodes = {{.type = parser_ctx_t::is_terminal(yystack_[0].value.as < std::string > ())? ulang_grammar::non_terminal_node::TERMINAL : ulang_grammar::non_terminal_node::NON_TERMINAL, .str = yystack_[0].value.as < std::string > ()}}};}
+#line 854 "build/parser.cpp"
+    break;
+
+  case 25: // grammar_rule_node: LEFT_BRC grammar_rule_option_list RIGHT_BRC
+#line 105 "parser.y"
+                                                     {yylhs.value.as < ulang_grammar::non_terminal_node > ()=yystack_[1].value.as < ulang_grammar::non_terminal_node > ();}
+#line 860 "build/parser.cpp"
+    break;
+
+  case 26: // grammar_rule_node: LEFT_PRN grammar_rule_option_list RIGHT_PRN
+#line 106 "parser.y"
+                                                     {yylhs.value.as < ulang_grammar::non_terminal_node > ()=yystack_[1].value.as < ulang_grammar::non_terminal_node > ();}
+#line 866 "build/parser.cpp"
+    break;
+
+  case 27: // grammar_rule_node: grammar_rule_node IDENTIFIER
+#line 107 "parser.y"
+                                      {yystack_[1].value.as < ulang_grammar::non_terminal_node > ().sub_nodes.push_back({.type = parser_ctx_t::is_terminal(yystack_[0].value.as < std::string > ())? ulang_grammar::non_terminal_node::TERMINAL : ulang_grammar::non_terminal_node::NON_TERMINAL, .str = yystack_[0].value.as < std::string > ()}); yylhs.value.as < ulang_grammar::non_terminal_node > () = yystack_[1].value.as < ulang_grammar::non_terminal_node > ();}
+#line 872 "build/parser.cpp"
+    break;
+
+  case 28: // grammar_rule_node: grammar_rule_node LEFT_BRC grammar_rule_option_list RIGHT_BRC
+#line 108 "parser.y"
+                                                                       {yystack_[1].value.as < ulang_grammar::non_terminal_node > ().type = ulang_grammar::non_terminal_node::ZERO_OR_MORE; yystack_[3].value.as < ulang_grammar::non_terminal_node > ().sub_nodes.push_back(yystack_[1].value.as < ulang_grammar::non_terminal_node > ()); yylhs.value.as < ulang_grammar::non_terminal_node > ()=yystack_[3].value.as < ulang_grammar::non_terminal_node > ();}
+#line 878 "build/parser.cpp"
+    break;
+
+  case 29: // grammar_rule_node: grammar_rule_node LEFT_PRN grammar_rule_option_list RIGHT_PRN
+#line 109 "parser.y"
+                                                                       {yystack_[3].value.as < ulang_grammar::non_terminal_node > ().sub_nodes.push_back(yystack_[1].value.as < ulang_grammar::non_terminal_node > ()); yylhs.value.as < ulang_grammar::non_terminal_node > ()=yystack_[3].value.as < ulang_grammar::non_terminal_node > ();}
+#line 884 "build/parser.cpp"
+    break;
+
+  case 30: // grammar_rule_node_pattern: LEFT_ANG grammar_rule_node_pattern_token_list RIGHT_ANG
+#line 112 "parser.y"
+                                                                                  {yylhs.value.as < std::string > ()=ctx.get_str(LOC_OF(2));}
+#line 890 "build/parser.cpp"
+    break;
+
+  case 31: // grammar_rule_node_pattern_token_list: any_token
+#line 113 "parser.y"
+                                               {yylhs.value.as < std::string > ()={yystack_[0].value.as < std::string > ()};}
+#line 896 "build/parser.cpp"
+    break;
+
+  case 32: // grammar_rule_node_pattern_token_list: grammar_rule_node_pattern_token_list any_token
+#line 114 "parser.y"
+                                                        {/*$1.append(" ").append($2);*/ yylhs.value.as < std::string > ()=yystack_[1].value.as < std::string > ();}
+#line 902 "build/parser.cpp"
+    break;
+
+  case 33: // any_token: RAW_TOKEN
+#line 116 "parser.y"
                      { yylhs.value.as < std::string > () = yystack_[0].value.as < std::string > (); }
-#line 668 "build/parser.cpp"
+#line 908 "build/parser.cpp"
+    break;
+
+  case 34: // any_token: EQUAL
+#line 117 "parser.y"
+                { yylhs.value.as < std::string > () = "="; }
+#line 914 "build/parser.cpp"
+    break;
+
+  case 35: // any_token: LEFT_BRC
+#line 118 "parser.y"
+                   { yylhs.value.as < std::string > () = "{"; }
+#line 920 "build/parser.cpp"
+    break;
+
+  case 36: // any_token: RIGHT_BRC
+#line 119 "parser.y"
+                    { yylhs.value.as < std::string > () = "}"; }
+#line 926 "build/parser.cpp"
+    break;
+
+  case 37: // any_token: LEFT_BRK
+#line 120 "parser.y"
+                   { yylhs.value.as < std::string > () = "["; }
+#line 932 "build/parser.cpp"
+    break;
+
+  case 38: // any_token: RIGHT_BRK
+#line 121 "parser.y"
+                    { yylhs.value.as < std::string > () = "]"; }
+#line 938 "build/parser.cpp"
+    break;
+
+  case 39: // any_token: LEFT_PRN
+#line 122 "parser.y"
+                   { yylhs.value.as < std::string > () = "("; }
+#line 944 "build/parser.cpp"
+    break;
+
+  case 40: // any_token: RIGHT_PRN
+#line 123 "parser.y"
+                    { yylhs.value.as < std::string > () = ")"; }
+#line 950 "build/parser.cpp"
+    break;
+
+  case 41: // any_token: LEFT_ANG
+#line 124 "parser.y"
+                   { yylhs.value.as < std::string > () = "<"; }
+#line 956 "build/parser.cpp"
+    break;
+
+  case 42: // any_token: RIGHT_ANG
+#line 125 "parser.y"
+                    { yylhs.value.as < std::string > () = ">"; }
+#line 962 "build/parser.cpp"
+    break;
+
+  case 43: // any_token: PIPE
+#line 126 "parser.y"
+               { yylhs.value.as < std::string > () = "|"; }
+#line 968 "build/parser.cpp"
+    break;
+
+  case 44: // any_token: SEMICOLON
+#line 127 "parser.y"
+                    { yylhs.value.as < std::string > () = ";"; }
+#line 974 "build/parser.cpp"
+    break;
+
+  case 45: // any_token: TOKENS_KW
+#line 128 "parser.y"
+                    { yylhs.value.as < std::string > () = "tokens"; }
+#line 980 "build/parser.cpp"
+    break;
+
+  case 46: // any_token: RULES_KW
+#line 129 "parser.y"
+                   { yylhs.value.as < std::string > () = "rules"; }
+#line 986 "build/parser.cpp"
+    break;
+
+  case 47: // any_token: IDENTIFIER
+#line 130 "parser.y"
+                     { yylhs.value.as < std::string > () = yystack_[0].value.as < std::string > (); }
+#line 992 "build/parser.cpp"
     break;
 
 
-#line 672 "build/parser.cpp"
+#line 996 "build/parser.cpp"
 
             default:
               break;
@@ -1020,90 +1344,119 @@ namespace yy {
   }
 
 
-  const signed char parser::yypact_ninf_ = -8;
+  const signed char parser::yypact_ninf_ = -20;
 
-  const signed char parser::yytable_ninf_ = -1;
+  const signed char parser::yytable_ninf_ = -31;
 
   const signed char
   parser::yypact_[] =
   {
-      10,    -8,    -8,    -8,    -8,    -8,    -4,    -8,    -8,    -8,
-       2,     0,    -8,    -8,    21,    -8,    -8,    -8,    -8,    -8,
-      22,    23,    25,    -3,    -8,    26,    -8,    -8,    30,    13,
-      -8,    18,    27,    -8,    -8,    -8,    31,    20,    -8,    -8,
-      28,    -8,    -8,    -8,    24,    29,    28,    -8,    29
+      45,   -20,   -20,   -20,   -20,   -20,   -20,   -20,   -20,   -20,
+     -20,   -20,   -20,   -20,     0,   -20,   -20,   -20,    38,     8,
+     -20,    45,   -20,   -20,    47,   -20,   -20,   -20,   -20,   -20,
+      63,    35,    74,    82,   -20,   -20,   -20,    36,   -20,    27,
+     -20,   -20,    95,   -20,   110,    83,   -20,   119,   -20,   -20,
+      25,    25,    25,   -20,   -10,    26,    31,   111,    81,    25,
+     -20,   -20,    25,    25,   -20,   -20,   -20,    99,   -20,    26,
+     120,   124,    -4,   -20,   -20,   -20
   };
 
   const signed char
   parser::yydefact_[] =
   {
-       0,    27,    28,    29,    30,    31,     0,     4,    32,    26,
-       0,     0,     5,     3,    10,     1,     2,     7,     8,     6,
-       0,     0,     0,     0,     9,     0,    11,    12,     0,     0,
-      14,     0,     0,    13,    15,    17,     0,     0,    19,    16,
-       0,    18,    20,    24,    21,    22,     0,    25,    23
+       0,    34,    35,    36,    37,    38,    39,    40,    41,    42,
+      43,    44,    45,    46,     0,    10,    47,    33,     0,     0,
+       5,     0,     4,     3,     0,     1,     2,     8,     7,     6,
+       0,     0,     0,     0,     9,    14,    11,     0,    12,     0,
+      18,    13,     0,    15,     0,     0,    17,     0,    19,    16,
+       0,     0,     0,    24,     0,    21,     0,     0,     0,     0,
+      20,    23,     0,     0,    27,    25,    26,     0,    31,    22,
+       0,     0,    42,    32,    28,    29
   };
 
   const signed char
   parser::yypgoto_[] =
   {
-      -8,    -8,    -8,    32,    -8,    -8,    -8,     8,    -8,    -8,
-       5,    -8,    -7,    33
+     -20,   -20,   104,     6,   -20,    13,   -20,   -20,   -20,   -20,
+     -20,   -20,   -20,    66,    68,   -20,   -20,   -19
   };
 
   const signed char
   parser::yydefgoto_[] =
   {
-       0,    10,    11,    12,    21,    22,    29,    30,    26,    37,
-      38,    44,    45,    13
+       0,    18,    19,    20,    21,    22,    32,    33,    39,    43,
+      38,    44,    48,    54,    55,    61,    67,    23
   };
 
   const signed char
   parser::yytable_[] =
   {
-      16,    14,    15,    27,     1,     2,     3,     4,     5,    28,
-       6,    17,     8,     9,     1,     2,     3,     4,     5,    33,
-       6,     7,     8,     9,    35,    28,    41,    23,    20,    24,
-      36,    31,    36,    25,    32,    40,    39,    34,    46,    48,
-      43,    47,    42,    18,    19
+      29,    58,   -30,    59,    60,    24,   -30,   -30,    26,   -30,
+     -30,    29,     1,     2,     3,     4,     5,     6,     7,     8,
+       9,    10,    11,    12,    13,    27,    14,    15,    16,    17,
+      51,    62,    28,    41,    52,    63,    27,    65,    25,    68,
+      35,    40,    58,    28,    59,    53,    64,    42,    73,     1,
+       2,     3,     4,     5,     6,     7,     8,     9,    10,    11,
+      12,    13,    31,    14,    15,    16,    17,     1,     2,     3,
+       4,    34,     6,     7,     8,     9,    10,    11,    12,    13,
+      36,    14,    15,    16,    17,     1,     2,     3,     4,     5,
+       6,     7,     8,     9,    10,    11,    12,    13,    37,    45,
+      49,    16,    17,     1,     2,     3,     4,     5,     6,     7,
+       8,    72,    10,    11,    12,    13,    46,    56,    57,    16,
+      17,    66,    58,    50,    59,    30,    74,    69,    70,    71,
+      47,    58,     0,    59,    75,    58,     0,    59
   };
 
   const signed char
   parser::yycheck_[] =
   {
-       0,     5,     0,     6,     4,     5,     6,     7,     8,    12,
-      10,    11,    12,    13,     4,     5,     6,     7,     8,     6,
-      10,    11,    12,    13,     6,    12,     6,     5,     7,     6,
-      12,     5,    12,     8,     4,     4,     9,    29,    14,    46,
-      12,    12,    37,    11,    11
+      19,    11,     6,    13,    14,     5,    10,    11,     0,    13,
+      14,    30,     4,     5,     6,     7,     8,     9,    10,    11,
+      12,    13,    14,    15,    16,    19,    18,    19,    20,    21,
+       5,     5,    19,     6,     9,     9,    30,     6,     0,    58,
+       5,     5,    11,    30,    13,    20,    20,    20,    67,     4,
+       5,     6,     7,     8,     9,    10,    11,    12,    13,    14,
+      15,    16,    15,    18,    19,    20,    21,     4,     5,     6,
+       7,     8,     9,    10,    11,    12,    13,    14,    15,    16,
+       6,    18,    19,    20,    21,     4,     5,     6,     7,     8,
+       9,    10,    11,    12,    13,    14,    15,    16,    16,     4,
+      17,    20,    21,     4,     5,     6,     7,     8,     9,    10,
+      11,    12,    13,    14,    15,    16,     6,    51,    52,    20,
+      21,    10,    11,     4,    13,    21,     6,    59,    62,    63,
+      20,    11,    -1,    13,    10,    11,    -1,    13
   };
 
   const signed char
   parser::yystos_[] =
   {
-       0,     4,     5,     6,     7,     8,    10,    11,    12,    13,
-      16,    17,    18,    28,     5,     0,     0,    11,    18,    28,
-       7,    19,    20,     5,     6,     8,    23,     6,    12,    21,
-      22,     5,     4,     6,    22,     6,    12,    24,    25,     9,
-       4,     6,    25,    12,    26,    27,    14,    12,    27
+       0,     4,     5,     6,     7,     8,     9,    10,    11,    12,
+      13,    14,    15,    16,    18,    19,    20,    21,    23,    24,
+      25,    26,    27,    39,     5,     0,     0,    25,    27,    39,
+      24,    15,    28,    29,     8,     5,     6,    16,    32,    30,
+       5,     6,    20,    31,    33,     4,     6,    20,    34,    17,
+       4,     5,     9,    20,    35,    36,    35,    35,    11,    13,
+      14,    37,     5,     9,    20,     6,    10,    38,    39,    36,
+      35,    35,    12,    39,     6,    10
   };
 
   const signed char
   parser::yyr1_[] =
   {
-       0,    15,    16,    17,    17,    17,    17,    17,    17,    18,
-      19,    19,    20,    20,    21,    21,    22,    23,    23,    24,
-      24,    25,    26,    26,    27,    27,    28,    28,    28,    28,
-      28,    28,    28
+       0,    22,    23,    24,    24,    24,    24,    24,    24,    25,
+      26,    27,    28,    29,    30,    30,    31,    32,    33,    33,
+      34,    35,    35,    35,    36,    36,    36,    36,    36,    36,
+      37,    38,    38,    39,    39,    39,    39,    39,    39,    39,
+      39,    39,    39,    39,    39,    39,    39,    39
   };
 
   const signed char
   parser::yyr2_[] =
   {
-       0,     2,     2,     1,     1,     1,     2,     2,     2,     4,
-       0,     2,     3,     4,     1,     2,     3,     3,     4,     1,
-       2,     3,     1,     3,     1,     2,     1,     1,     1,     1,
-       1,     1,     1
+       0,     2,     2,     1,     1,     1,     2,     2,     2,     3,
+       1,     4,     2,     4,     0,     2,     3,     4,     0,     2,
+       4,     1,     3,     2,     1,     3,     3,     2,     4,     4,
+       3,     1,     2,     1,     1,     1,     1,     1,     1,     1,
+       1,     1,     1,     1,     1,     1,     1,     1
   };
 
 
@@ -1114,25 +1467,30 @@ namespace yy {
   const parser::yytname_[] =
   {
   "END", "error", "\"invalid token\"", "ROOT", "EQUAL", "LEFT_BRC",
-  "RIGHT_BRC", "TOKENS_KW", "RULES_KW", "TOKEN_REGEX", "GRAMMAR_SPEC_TAG",
-  "GRAMMAR_TAG", "IDENTIFIER", "RAW_TOKEN", "\"|\"", "$accept", "root",
-  "token_list", "grammar_spec", "grammar_spec_block",
+  "RIGHT_BRC", "LEFT_BRK", "RIGHT_BRK", "LEFT_PRN", "RIGHT_PRN",
+  "LEFT_ANG", "RIGHT_ANG", "PIPE", "SEMICOLON", "TOKENS_KW", "RULES_KW",
+  "TOKEN_REGEX", "GRAMMAR_SPEC_TAG", "GRAMMAR_TAG", "IDENTIFIER",
+  "RAW_TOKEN", "$accept", "root", "token_list", "grammar_block",
+  "grammar_tag", "grammar_spec", "grammar_spec_block",
   "grammar_spec_tokens", "grammar_spec_token_list",
   "grammar_spec_token_list_item", "grammar_spec_rules",
   "grammar_spec_rule_list", "grammar_spec_rule_list_item",
-  "grammar_rule_option_list", "grammar_rule_option", "any_token", YY_NULLPTR
+  "grammar_rule_option_list", "grammar_rule_node",
+  "grammar_rule_node_pattern", "grammar_rule_node_pattern_token_list",
+  "any_token", YY_NULLPTR
   };
 #endif
 
 
 #if YYDEBUG
-  const signed char
+  const unsigned char
   parser::yyrline_[] =
   {
-       0,    47,    47,    49,    50,    51,    52,    53,    54,    56,
-      57,    58,    60,    61,    62,    63,    64,    66,    67,    68,
-      69,    70,    72,    73,    74,    75,    77,    78,    79,    80,
-      81,    82,    83
+       0,    74,    74,    76,    77,    78,    79,    80,    81,    83,
+      84,    86,    87,    89,    90,    91,    92,    94,    95,    96,
+      97,    99,   100,   101,   104,   105,   106,   107,   108,   109,
+     112,   113,   114,   116,   117,   118,   119,   120,   121,   122,
+     123,   124,   125,   126,   127,   128,   129,   130
   };
 
   void
@@ -1164,9 +1522,9 @@ namespace yy {
 
 
 } // yy
-#line 1168 "build/parser.cpp"
+#line 1526 "build/parser.cpp"
 
-#line 84 "parser.y"
+#line 131 "parser.y"
 
 
 // Main function for generated executable

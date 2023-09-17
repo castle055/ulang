@@ -10,23 +10,24 @@
 #include <stack>
 
 void uparser::parse(const std::string& str) {
-  parser_ctx_t ctx;
+  parser_ctx_t ctx{str};
   
   yy_scan_string(str.c_str(), ctx.lexer);
-  std::cout << std::endl << "[[PARSING]]" << std::endl;
-  
   ctx.parser->parse();
   
-  std::cout << "[TOKEN LIST]" << std::endl;
-  for (const auto &tokenv: ctx.current_grammar.top().result_tokens.top()) {
-    for (const auto &token: tokenv) {
-      if (token.contains(' ')) {
-        std::cout << "\"" << token << "\" ";
-      } else {
-        std::cout << token << " ";
-      }
-    }
+  std::string text = str;
+  std::string t;
+  for (const auto &sub: ctx.current_grammar.top().substitutions) {
+    auto &[p, s] = sub;
+    t = "";
+    if (p.begin.column > 1)
+      t.append(text.substr(0, p.begin.column));
+    t.append(s);
+    t.append(text.substr(p.end.column-1));
+    text = t;
   }
-  std::cout << std::endl;
+  std::string res = ctx.current_grammar.top().parse(text);
+  
+  std::cout << res << std::endl;
 }
 

@@ -50,8 +50,11 @@
     #include <stdio.h>
     #include <string>
     #include "../parser_ctx.h"
+    #include <iostream>
 
-#line 55 "build/parser.hpp"
+    #define LOC_OF(INDEX) yystack_[INDEX -1].location
+
+#line 58 "build/parser.hpp"
 
 
 # include <cstdlib> // std::abort
@@ -186,7 +189,7 @@
 #endif
 
 namespace yy {
-#line 190 "build/parser.hpp"
+#line 193 "build/parser.hpp"
 
 
 
@@ -382,13 +385,37 @@ namespace yy {
     /// An auxiliary type to compute the largest semantic type.
     union union_type
     {
+      // grammar_spec_rule_list_item
+      char dummy1[sizeof (std::pair<std::string, ulang_grammar::grammar_rule>)];
+
+      // grammar_spec_token_list_item
+      char dummy2[sizeof (std::pair<std::string, ulang_grammar::token_rule>)];
+
       // TOKEN_REGEX
       // GRAMMAR_SPEC_TAG
       // GRAMMAR_TAG
       // IDENTIFIER
       // RAW_TOKEN
+      // grammar_rule_node_pattern
+      // grammar_rule_node_pattern_token_list
       // any_token
-      char dummy1[sizeof (std::string)];
+      char dummy3[sizeof (std::string)];
+
+      // grammar_spec_rules
+      // grammar_spec_rule_list
+      char dummy4[sizeof (std::unordered_map<std::string, ulang_grammar::grammar_rule>)];
+
+      // grammar_spec_tokens
+      // grammar_spec_token_list
+      char dummy5[sizeof (std::unordered_map<std::string, ulang_grammar::token_rule>)];
+
+      // grammar_spec
+      // grammar_spec_block
+      char dummy6[sizeof (ulang_grammar)];
+
+      // grammar_rule_option_list
+      // grammar_rule_node
+      char dummy7[sizeof (ulang_grammar::non_terminal_node)];
     };
 
     /// The size of the largest semantic type.
@@ -442,13 +469,21 @@ namespace yy {
     EQUAL = 259,                   // EQUAL
     LEFT_BRC = 260,                // LEFT_BRC
     RIGHT_BRC = 261,               // RIGHT_BRC
-    TOKENS_KW = 262,               // TOKENS_KW
-    RULES_KW = 263,                // RULES_KW
-    TOKEN_REGEX = 264,             // TOKEN_REGEX
-    GRAMMAR_SPEC_TAG = 265,        // GRAMMAR_SPEC_TAG
-    GRAMMAR_TAG = 266,             // GRAMMAR_TAG
-    IDENTIFIER = 267,              // IDENTIFIER
-    RAW_TOKEN = 268                // RAW_TOKEN
+    LEFT_BRK = 262,                // LEFT_BRK
+    RIGHT_BRK = 263,               // RIGHT_BRK
+    LEFT_PRN = 264,                // LEFT_PRN
+    RIGHT_PRN = 265,               // RIGHT_PRN
+    LEFT_ANG = 266,                // LEFT_ANG
+    RIGHT_ANG = 267,               // RIGHT_ANG
+    PIPE = 268,                    // PIPE
+    SEMICOLON = 269,               // SEMICOLON
+    TOKENS_KW = 270,               // TOKENS_KW
+    RULES_KW = 271,                // RULES_KW
+    TOKEN_REGEX = 272,             // TOKEN_REGEX
+    GRAMMAR_SPEC_TAG = 273,        // GRAMMAR_SPEC_TAG
+    GRAMMAR_TAG = 274,             // GRAMMAR_TAG
+    IDENTIFIER = 275,              // IDENTIFIER
+    RAW_TOKEN = 276                // RAW_TOKEN
       };
       /// Backward compatibility alias (Bison 3.6).
       typedef token_kind_type yytokentype;
@@ -465,7 +500,7 @@ namespace yy {
     {
       enum symbol_kind_type
       {
-        YYNTOKENS = 15, ///< Number of tokens.
+        YYNTOKENS = 22, ///< Number of tokens.
         S_YYEMPTY = -2,
         S_YYEOF = 0,                             // END
         S_YYerror = 1,                           // error
@@ -474,28 +509,39 @@ namespace yy {
         S_EQUAL = 4,                             // EQUAL
         S_LEFT_BRC = 5,                          // LEFT_BRC
         S_RIGHT_BRC = 6,                         // RIGHT_BRC
-        S_TOKENS_KW = 7,                         // TOKENS_KW
-        S_RULES_KW = 8,                          // RULES_KW
-        S_TOKEN_REGEX = 9,                       // TOKEN_REGEX
-        S_GRAMMAR_SPEC_TAG = 10,                 // GRAMMAR_SPEC_TAG
-        S_GRAMMAR_TAG = 11,                      // GRAMMAR_TAG
-        S_IDENTIFIER = 12,                       // IDENTIFIER
-        S_RAW_TOKEN = 13,                        // RAW_TOKEN
-        S_14_ = 14,                              // "|"
-        S_YYACCEPT = 15,                         // $accept
-        S_root = 16,                             // root
-        S_token_list = 17,                       // token_list
-        S_grammar_spec = 18,                     // grammar_spec
-        S_grammar_spec_block = 19,               // grammar_spec_block
-        S_grammar_spec_tokens = 20,              // grammar_spec_tokens
-        S_grammar_spec_token_list = 21,          // grammar_spec_token_list
-        S_grammar_spec_token_list_item = 22,     // grammar_spec_token_list_item
-        S_grammar_spec_rules = 23,               // grammar_spec_rules
-        S_grammar_spec_rule_list = 24,           // grammar_spec_rule_list
-        S_grammar_spec_rule_list_item = 25,      // grammar_spec_rule_list_item
-        S_grammar_rule_option_list = 26,         // grammar_rule_option_list
-        S_grammar_rule_option = 27,              // grammar_rule_option
-        S_any_token = 28                         // any_token
+        S_LEFT_BRK = 7,                          // LEFT_BRK
+        S_RIGHT_BRK = 8,                         // RIGHT_BRK
+        S_LEFT_PRN = 9,                          // LEFT_PRN
+        S_RIGHT_PRN = 10,                        // RIGHT_PRN
+        S_LEFT_ANG = 11,                         // LEFT_ANG
+        S_RIGHT_ANG = 12,                        // RIGHT_ANG
+        S_PIPE = 13,                             // PIPE
+        S_SEMICOLON = 14,                        // SEMICOLON
+        S_TOKENS_KW = 15,                        // TOKENS_KW
+        S_RULES_KW = 16,                         // RULES_KW
+        S_TOKEN_REGEX = 17,                      // TOKEN_REGEX
+        S_GRAMMAR_SPEC_TAG = 18,                 // GRAMMAR_SPEC_TAG
+        S_GRAMMAR_TAG = 19,                      // GRAMMAR_TAG
+        S_IDENTIFIER = 20,                       // IDENTIFIER
+        S_RAW_TOKEN = 21,                        // RAW_TOKEN
+        S_YYACCEPT = 22,                         // $accept
+        S_root = 23,                             // root
+        S_token_list = 24,                       // token_list
+        S_grammar_block = 25,                    // grammar_block
+        S_grammar_tag = 26,                      // grammar_tag
+        S_grammar_spec = 27,                     // grammar_spec
+        S_grammar_spec_block = 28,               // grammar_spec_block
+        S_grammar_spec_tokens = 29,              // grammar_spec_tokens
+        S_grammar_spec_token_list = 30,          // grammar_spec_token_list
+        S_grammar_spec_token_list_item = 31,     // grammar_spec_token_list_item
+        S_grammar_spec_rules = 32,               // grammar_spec_rules
+        S_grammar_spec_rule_list = 33,           // grammar_spec_rule_list
+        S_grammar_spec_rule_list_item = 34,      // grammar_spec_rule_list_item
+        S_grammar_rule_option_list = 35,         // grammar_rule_option_list
+        S_grammar_rule_node = 36,                // grammar_rule_node
+        S_grammar_rule_node_pattern = 37,        // grammar_rule_node_pattern
+        S_grammar_rule_node_pattern_token_list = 38, // grammar_rule_node_pattern_token_list
+        S_any_token = 39                         // any_token
       };
     };
 
@@ -532,13 +578,43 @@ namespace yy {
       {
         switch (this->kind ())
     {
+      case symbol_kind::S_grammar_spec_rule_list_item: // grammar_spec_rule_list_item
+        value.move< std::pair<std::string, ulang_grammar::grammar_rule> > (std::move (that.value));
+        break;
+
+      case symbol_kind::S_grammar_spec_token_list_item: // grammar_spec_token_list_item
+        value.move< std::pair<std::string, ulang_grammar::token_rule> > (std::move (that.value));
+        break;
+
       case symbol_kind::S_TOKEN_REGEX: // TOKEN_REGEX
       case symbol_kind::S_GRAMMAR_SPEC_TAG: // GRAMMAR_SPEC_TAG
       case symbol_kind::S_GRAMMAR_TAG: // GRAMMAR_TAG
       case symbol_kind::S_IDENTIFIER: // IDENTIFIER
       case symbol_kind::S_RAW_TOKEN: // RAW_TOKEN
+      case symbol_kind::S_grammar_rule_node_pattern: // grammar_rule_node_pattern
+      case symbol_kind::S_grammar_rule_node_pattern_token_list: // grammar_rule_node_pattern_token_list
       case symbol_kind::S_any_token: // any_token
         value.move< std::string > (std::move (that.value));
+        break;
+
+      case symbol_kind::S_grammar_spec_rules: // grammar_spec_rules
+      case symbol_kind::S_grammar_spec_rule_list: // grammar_spec_rule_list
+        value.move< std::unordered_map<std::string, ulang_grammar::grammar_rule> > (std::move (that.value));
+        break;
+
+      case symbol_kind::S_grammar_spec_tokens: // grammar_spec_tokens
+      case symbol_kind::S_grammar_spec_token_list: // grammar_spec_token_list
+        value.move< std::unordered_map<std::string, ulang_grammar::token_rule> > (std::move (that.value));
+        break;
+
+      case symbol_kind::S_grammar_spec: // grammar_spec
+      case symbol_kind::S_grammar_spec_block: // grammar_spec_block
+        value.move< ulang_grammar > (std::move (that.value));
+        break;
+
+      case symbol_kind::S_grammar_rule_option_list: // grammar_rule_option_list
+      case symbol_kind::S_grammar_rule_node: // grammar_rule_node
+        value.move< ulang_grammar::non_terminal_node > (std::move (that.value));
         break;
 
       default:
@@ -565,6 +641,34 @@ namespace yy {
 #endif
 
 #if 201103L <= YY_CPLUSPLUS
+      basic_symbol (typename Base::kind_type t, std::pair<std::string, ulang_grammar::grammar_rule>&& v, location_type&& l)
+        : Base (t)
+        , value (std::move (v))
+        , location (std::move (l))
+      {}
+#else
+      basic_symbol (typename Base::kind_type t, const std::pair<std::string, ulang_grammar::grammar_rule>& v, const location_type& l)
+        : Base (t)
+        , value (v)
+        , location (l)
+      {}
+#endif
+
+#if 201103L <= YY_CPLUSPLUS
+      basic_symbol (typename Base::kind_type t, std::pair<std::string, ulang_grammar::token_rule>&& v, location_type&& l)
+        : Base (t)
+        , value (std::move (v))
+        , location (std::move (l))
+      {}
+#else
+      basic_symbol (typename Base::kind_type t, const std::pair<std::string, ulang_grammar::token_rule>& v, const location_type& l)
+        : Base (t)
+        , value (v)
+        , location (l)
+      {}
+#endif
+
+#if 201103L <= YY_CPLUSPLUS
       basic_symbol (typename Base::kind_type t, std::string&& v, location_type&& l)
         : Base (t)
         , value (std::move (v))
@@ -572,6 +676,62 @@ namespace yy {
       {}
 #else
       basic_symbol (typename Base::kind_type t, const std::string& v, const location_type& l)
+        : Base (t)
+        , value (v)
+        , location (l)
+      {}
+#endif
+
+#if 201103L <= YY_CPLUSPLUS
+      basic_symbol (typename Base::kind_type t, std::unordered_map<std::string, ulang_grammar::grammar_rule>&& v, location_type&& l)
+        : Base (t)
+        , value (std::move (v))
+        , location (std::move (l))
+      {}
+#else
+      basic_symbol (typename Base::kind_type t, const std::unordered_map<std::string, ulang_grammar::grammar_rule>& v, const location_type& l)
+        : Base (t)
+        , value (v)
+        , location (l)
+      {}
+#endif
+
+#if 201103L <= YY_CPLUSPLUS
+      basic_symbol (typename Base::kind_type t, std::unordered_map<std::string, ulang_grammar::token_rule>&& v, location_type&& l)
+        : Base (t)
+        , value (std::move (v))
+        , location (std::move (l))
+      {}
+#else
+      basic_symbol (typename Base::kind_type t, const std::unordered_map<std::string, ulang_grammar::token_rule>& v, const location_type& l)
+        : Base (t)
+        , value (v)
+        , location (l)
+      {}
+#endif
+
+#if 201103L <= YY_CPLUSPLUS
+      basic_symbol (typename Base::kind_type t, ulang_grammar&& v, location_type&& l)
+        : Base (t)
+        , value (std::move (v))
+        , location (std::move (l))
+      {}
+#else
+      basic_symbol (typename Base::kind_type t, const ulang_grammar& v, const location_type& l)
+        : Base (t)
+        , value (v)
+        , location (l)
+      {}
+#endif
+
+#if 201103L <= YY_CPLUSPLUS
+      basic_symbol (typename Base::kind_type t, ulang_grammar::non_terminal_node&& v, location_type&& l)
+        : Base (t)
+        , value (std::move (v))
+        , location (std::move (l))
+      {}
+#else
+      basic_symbol (typename Base::kind_type t, const ulang_grammar::non_terminal_node& v, const location_type& l)
         : Base (t)
         , value (v)
         , location (l)
@@ -602,13 +762,43 @@ namespace yy {
         // Value type destructor.
 switch (yykind)
     {
+      case symbol_kind::S_grammar_spec_rule_list_item: // grammar_spec_rule_list_item
+        value.template destroy< std::pair<std::string, ulang_grammar::grammar_rule> > ();
+        break;
+
+      case symbol_kind::S_grammar_spec_token_list_item: // grammar_spec_token_list_item
+        value.template destroy< std::pair<std::string, ulang_grammar::token_rule> > ();
+        break;
+
       case symbol_kind::S_TOKEN_REGEX: // TOKEN_REGEX
       case symbol_kind::S_GRAMMAR_SPEC_TAG: // GRAMMAR_SPEC_TAG
       case symbol_kind::S_GRAMMAR_TAG: // GRAMMAR_TAG
       case symbol_kind::S_IDENTIFIER: // IDENTIFIER
       case symbol_kind::S_RAW_TOKEN: // RAW_TOKEN
+      case symbol_kind::S_grammar_rule_node_pattern: // grammar_rule_node_pattern
+      case symbol_kind::S_grammar_rule_node_pattern_token_list: // grammar_rule_node_pattern_token_list
       case symbol_kind::S_any_token: // any_token
         value.template destroy< std::string > ();
+        break;
+
+      case symbol_kind::S_grammar_spec_rules: // grammar_spec_rules
+      case symbol_kind::S_grammar_spec_rule_list: // grammar_spec_rule_list
+        value.template destroy< std::unordered_map<std::string, ulang_grammar::grammar_rule> > ();
+        break;
+
+      case symbol_kind::S_grammar_spec_tokens: // grammar_spec_tokens
+      case symbol_kind::S_grammar_spec_token_list: // grammar_spec_token_list
+        value.template destroy< std::unordered_map<std::string, ulang_grammar::token_rule> > ();
+        break;
+
+      case symbol_kind::S_grammar_spec: // grammar_spec
+      case symbol_kind::S_grammar_spec_block: // grammar_spec_block
+        value.template destroy< ulang_grammar > ();
+        break;
+
+      case symbol_kind::S_grammar_rule_option_list: // grammar_rule_option_list
+      case symbol_kind::S_grammar_rule_node: // grammar_rule_node
+        value.template destroy< ulang_grammar::non_terminal_node > ();
         break;
 
       default:
@@ -871,6 +1061,126 @@ switch (yykind)
 #if 201103L <= YY_CPLUSPLUS
       static
       symbol_type
+      make_LEFT_BRK (location_type l)
+      {
+        return symbol_type (token::LEFT_BRK, std::move (l));
+      }
+#else
+      static
+      symbol_type
+      make_LEFT_BRK (const location_type& l)
+      {
+        return symbol_type (token::LEFT_BRK, l);
+      }
+#endif
+#if 201103L <= YY_CPLUSPLUS
+      static
+      symbol_type
+      make_RIGHT_BRK (location_type l)
+      {
+        return symbol_type (token::RIGHT_BRK, std::move (l));
+      }
+#else
+      static
+      symbol_type
+      make_RIGHT_BRK (const location_type& l)
+      {
+        return symbol_type (token::RIGHT_BRK, l);
+      }
+#endif
+#if 201103L <= YY_CPLUSPLUS
+      static
+      symbol_type
+      make_LEFT_PRN (location_type l)
+      {
+        return symbol_type (token::LEFT_PRN, std::move (l));
+      }
+#else
+      static
+      symbol_type
+      make_LEFT_PRN (const location_type& l)
+      {
+        return symbol_type (token::LEFT_PRN, l);
+      }
+#endif
+#if 201103L <= YY_CPLUSPLUS
+      static
+      symbol_type
+      make_RIGHT_PRN (location_type l)
+      {
+        return symbol_type (token::RIGHT_PRN, std::move (l));
+      }
+#else
+      static
+      symbol_type
+      make_RIGHT_PRN (const location_type& l)
+      {
+        return symbol_type (token::RIGHT_PRN, l);
+      }
+#endif
+#if 201103L <= YY_CPLUSPLUS
+      static
+      symbol_type
+      make_LEFT_ANG (location_type l)
+      {
+        return symbol_type (token::LEFT_ANG, std::move (l));
+      }
+#else
+      static
+      symbol_type
+      make_LEFT_ANG (const location_type& l)
+      {
+        return symbol_type (token::LEFT_ANG, l);
+      }
+#endif
+#if 201103L <= YY_CPLUSPLUS
+      static
+      symbol_type
+      make_RIGHT_ANG (location_type l)
+      {
+        return symbol_type (token::RIGHT_ANG, std::move (l));
+      }
+#else
+      static
+      symbol_type
+      make_RIGHT_ANG (const location_type& l)
+      {
+        return symbol_type (token::RIGHT_ANG, l);
+      }
+#endif
+#if 201103L <= YY_CPLUSPLUS
+      static
+      symbol_type
+      make_PIPE (location_type l)
+      {
+        return symbol_type (token::PIPE, std::move (l));
+      }
+#else
+      static
+      symbol_type
+      make_PIPE (const location_type& l)
+      {
+        return symbol_type (token::PIPE, l);
+      }
+#endif
+#if 201103L <= YY_CPLUSPLUS
+      static
+      symbol_type
+      make_SEMICOLON (location_type l)
+      {
+        return symbol_type (token::SEMICOLON, std::move (l));
+      }
+#else
+      static
+      symbol_type
+      make_SEMICOLON (const location_type& l)
+      {
+        return symbol_type (token::SEMICOLON, l);
+      }
+#endif
+#if 201103L <= YY_CPLUSPLUS
+      static
+      symbol_type
       make_TOKENS_KW (location_type l)
       {
         return symbol_type (token::TOKENS_KW, std::move (l));
@@ -1076,7 +1386,7 @@ switch (yykind)
 
 #if YYDEBUG
     // YYRLINE[YYN] -- Source line where rule number YYN was defined.
-    static const signed char yyrline_[];
+    static const unsigned char yyrline_[];
     /// Report on the debug stream that the rule \a r is going to be reduced.
     virtual void yy_reduce_print_ (int r) const;
     /// Print the state stack on the debug stream.
@@ -1303,9 +1613,9 @@ switch (yykind)
     /// Constants.
     enum
     {
-      yylast_ = 44,     ///< Last index in yytable_.
-      yynnts_ = 14,  ///< Number of nonterminal symbols.
-      yyfinal_ = 15 ///< Termination state number.
+      yylast_ = 137,     ///< Last index in yytable_.
+      yynnts_ = 18,  ///< Number of nonterminal symbols.
+      yyfinal_ = 25 ///< Termination state number.
     };
 
 
@@ -1352,10 +1662,11 @@ switch (yykind)
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     1,     2,     3,     4,
-       5,     6,     7,     8,     9,    10,    11,    12,    13,    14
+       5,     6,     7,     8,     9,    10,    11,    12,    13,    14,
+      15,    16,    17,    18,    19,    20,    21
     };
     // Last valid token kind.
-    const int code_max = 269;
+    const int code_max = 276;
 
     if (t <= 0)
       return symbol_kind::S_YYEOF;
@@ -1374,13 +1685,43 @@ switch (yykind)
   {
     switch (this->kind ())
     {
+      case symbol_kind::S_grammar_spec_rule_list_item: // grammar_spec_rule_list_item
+        value.copy< std::pair<std::string, ulang_grammar::grammar_rule> > (YY_MOVE (that.value));
+        break;
+
+      case symbol_kind::S_grammar_spec_token_list_item: // grammar_spec_token_list_item
+        value.copy< std::pair<std::string, ulang_grammar::token_rule> > (YY_MOVE (that.value));
+        break;
+
       case symbol_kind::S_TOKEN_REGEX: // TOKEN_REGEX
       case symbol_kind::S_GRAMMAR_SPEC_TAG: // GRAMMAR_SPEC_TAG
       case symbol_kind::S_GRAMMAR_TAG: // GRAMMAR_TAG
       case symbol_kind::S_IDENTIFIER: // IDENTIFIER
       case symbol_kind::S_RAW_TOKEN: // RAW_TOKEN
+      case symbol_kind::S_grammar_rule_node_pattern: // grammar_rule_node_pattern
+      case symbol_kind::S_grammar_rule_node_pattern_token_list: // grammar_rule_node_pattern_token_list
       case symbol_kind::S_any_token: // any_token
         value.copy< std::string > (YY_MOVE (that.value));
+        break;
+
+      case symbol_kind::S_grammar_spec_rules: // grammar_spec_rules
+      case symbol_kind::S_grammar_spec_rule_list: // grammar_spec_rule_list
+        value.copy< std::unordered_map<std::string, ulang_grammar::grammar_rule> > (YY_MOVE (that.value));
+        break;
+
+      case symbol_kind::S_grammar_spec_tokens: // grammar_spec_tokens
+      case symbol_kind::S_grammar_spec_token_list: // grammar_spec_token_list
+        value.copy< std::unordered_map<std::string, ulang_grammar::token_rule> > (YY_MOVE (that.value));
+        break;
+
+      case symbol_kind::S_grammar_spec: // grammar_spec
+      case symbol_kind::S_grammar_spec_block: // grammar_spec_block
+        value.copy< ulang_grammar > (YY_MOVE (that.value));
+        break;
+
+      case symbol_kind::S_grammar_rule_option_list: // grammar_rule_option_list
+      case symbol_kind::S_grammar_rule_node: // grammar_rule_node
+        value.copy< ulang_grammar::non_terminal_node > (YY_MOVE (that.value));
         break;
 
       default:
@@ -1414,13 +1755,43 @@ switch (yykind)
     super_type::move (s);
     switch (this->kind ())
     {
+      case symbol_kind::S_grammar_spec_rule_list_item: // grammar_spec_rule_list_item
+        value.move< std::pair<std::string, ulang_grammar::grammar_rule> > (YY_MOVE (s.value));
+        break;
+
+      case symbol_kind::S_grammar_spec_token_list_item: // grammar_spec_token_list_item
+        value.move< std::pair<std::string, ulang_grammar::token_rule> > (YY_MOVE (s.value));
+        break;
+
       case symbol_kind::S_TOKEN_REGEX: // TOKEN_REGEX
       case symbol_kind::S_GRAMMAR_SPEC_TAG: // GRAMMAR_SPEC_TAG
       case symbol_kind::S_GRAMMAR_TAG: // GRAMMAR_TAG
       case symbol_kind::S_IDENTIFIER: // IDENTIFIER
       case symbol_kind::S_RAW_TOKEN: // RAW_TOKEN
+      case symbol_kind::S_grammar_rule_node_pattern: // grammar_rule_node_pattern
+      case symbol_kind::S_grammar_rule_node_pattern_token_list: // grammar_rule_node_pattern_token_list
       case symbol_kind::S_any_token: // any_token
         value.move< std::string > (YY_MOVE (s.value));
+        break;
+
+      case symbol_kind::S_grammar_spec_rules: // grammar_spec_rules
+      case symbol_kind::S_grammar_spec_rule_list: // grammar_spec_rule_list
+        value.move< std::unordered_map<std::string, ulang_grammar::grammar_rule> > (YY_MOVE (s.value));
+        break;
+
+      case symbol_kind::S_grammar_spec_tokens: // grammar_spec_tokens
+      case symbol_kind::S_grammar_spec_token_list: // grammar_spec_token_list
+        value.move< std::unordered_map<std::string, ulang_grammar::token_rule> > (YY_MOVE (s.value));
+        break;
+
+      case symbol_kind::S_grammar_spec: // grammar_spec
+      case symbol_kind::S_grammar_spec_block: // grammar_spec_block
+        value.move< ulang_grammar > (YY_MOVE (s.value));
+        break;
+
+      case symbol_kind::S_grammar_rule_option_list: // grammar_rule_option_list
+      case symbol_kind::S_grammar_rule_node: // grammar_rule_node
+        value.move< ulang_grammar::non_terminal_node > (YY_MOVE (s.value));
         break;
 
       default:
@@ -1489,7 +1860,7 @@ switch (yykind)
 
 
 } // yy
-#line 1493 "build/parser.hpp"
+#line 1864 "build/parser.hpp"
 
 
 

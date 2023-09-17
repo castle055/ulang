@@ -8,7 +8,7 @@ int main() {
   std::ifstream file("../test.ul");
   std::string file_s;
   file_s.assign((std::istreambuf_iterator<char>(file)),(std::istreambuf_iterator<char>()));
-  std::cout << file_s << std::endl;
+  //std::cout << file_s << std::endl;
   uparser::parse(file_s);
   //uparser::parse("#[grammar: ]");
   return 0;

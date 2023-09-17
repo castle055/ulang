@@ -1,17 +1,42 @@
-int a = 2;
 #[grammar: assign-gr] {
     tokens {
-        NUM = /[0-9]+/
+        INT_NUM = /[0-9]+/
+        FLOAT_NUM = /[0-9]*\.[0-9]+/
         ASSIGN = /->/
-        ID = /[-a-zA-Z]+/
+        ID = /[a-zA-Z_]+[a-zA-Z0-9\-_]*/
+        LB = /\{/
+        RB = /\}/
+        MAIN = /main/
+        _WS = / /
+        _NL = /\n/
     }
     rules {
-        root = NUM ASSIGN ID
+        assign = INT_NUM ASSIGN ID <int $3 = $1;\n >
+               | FLOAT_NUM ASSIGN ID <double $3 = $1;\n>;
+        main_block = assign { main_block };
+
+        main = MAIN LB { main_block } RB <int main(int argc, char* argv[]) {\n%i+$3%i-\n}>;
+        root = main;
     }
 }
 
-int tokens = 34;
+[assign-gr|> main { 5 -> a 5 -> b 5 -> t }]
 
-[assign-gr]
+[component|> SomeComponent
+  props {
+  }
+  state {
+  }
 
-5 -> asdf
+  redraw {
+    <VBox spacing="5" w="dim->cw">
+      <OtherComponent color="#FCAE1E"/>
+    </VBox>
+
+    |>VBox
+      | spacing = 5
+      | w = dim->cw
+      |>OtherComponent | color = "#FCAE1E" <|
+    <|
+  }
+]
