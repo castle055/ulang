@@ -20,9 +20,49 @@
     }
 }
 
+#[grammar: component] {
+    tokens {
+        COMP_BEGIN = /\|>/
+        COMP_END = /<\|/
+        PIPE = /\|/
+        EQ = /=/
+        ID = /[a-zA-Z_]+[a-zA-Z0-9\-_]*/
+        _WS = / /
+        _NL = /\n/
+    }
+    rules {
+        prop = PIPE ID EQ ID <.$2 = $4,>;
+        props_list = prop { props_list } <$1\n$2>;
+        props_spec = props_list <.props = {\n%i+$1%i-\n},>;
+
+        component_spec = COMP_BEGIN ID props_spec component_spec COMP_END <COMP($2)({\n%i+$3\n.inner = {\n%i+$4%i-\n},%i-\n})>
+                       | COMP_BEGIN ID props_spec COMP_END <COMP($2)({\n%i+$3\n%i-})>;
+        inner_list = component_spec { root };
+
+        root = inner_list;
+    }
+}
+
 [assign-gr|> main { 5 -> a 5 -> b 5 -> t }]
 
-[component|> SomeComponent
+[component|>
+    |>VBox
+      | spacing = some_var1
+      | w = some_var2
+    <|
+]
+
+[component|>
+    |>VBox
+      | spacing = some_var1
+      | w = some_var2
+      |>OtherComponent
+        | color = some_clr
+      <|
+    <|
+]
+
+[default|> SomeComponent
   props {
   }
   state {
@@ -34,8 +74,8 @@
     </VBox>
 
     |>VBox
-      | spacing = 5
-      | w = dim->cw
+      | spacing = some_var1
+      | w = some_var2
       |>OtherComponent | color = "#FCAE1E" <|
     <|
   }

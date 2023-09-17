@@ -117,6 +117,7 @@ private:
     .type = "",
   };
   
+  std::stack<std::vector<ulang_token>> parsed_tokens{{{}}};
   std::stack<std::vector<std::string>> result_stack{{{}}};
   
   void error(const std::string& msg) {
@@ -124,6 +125,9 @@ private:
   }
   
   void next() {
+    if (!token.type.empty()) {
+      parsed_tokens.top().push_back(token);
+    }
     if (tokens.empty()) {
       token = {
         .type = "EOI",
@@ -133,6 +137,18 @@ private:
       token = tokens.front();
       tokens.pop_front();
     }
+  }
+  
+  void backtrack() {
+    if (!token.type.empty()) {
+      tokens.push_front(token);
+      token = {.type = ""};
+    }
+    while (!parsed_tokens.top().empty()) {
+      tokens.push_front(parsed_tokens.top().back());
+      parsed_tokens.top().pop_back();
+    }
+    next();
   }
   
   bool accept(const std::string& token_type) {
@@ -190,12 +206,21 @@ private:
   
   bool handle_sub_nodes(const ulang_grammar::non_terminal_node& node) {
     result_stack.emplace();
+    parsed_tokens.emplace();
     for (const auto &n: node.sub_nodes) {
       if (!handle_node(n)) {
         result_stack.pop();
+        backtrack();
+        parsed_tokens.pop();
         return false;
       }
     }
+    auto parsed = parsed_tokens.top();
+    parsed_tokens.pop();
+    for (const auto &item: parsed) {
+      parsed_tokens.top().push_back(item);
+    }
+    
     auto res = result_stack.top();
     result_stack.pop();
     // TODO - Process with pattern
