@@ -3,7 +3,7 @@
   ULang
 </h1>
 
-<h4 align="center">A C++ library for building native user interfaces</h4>
+<h4 align="center">A thing I'm having trouble describing. It's a text preprocessor, but you define macros as fully fledged grammars.</h4>
 
 <p align="center">
 <img alt="Work In Progress" src="https://img.shields.io/badge/-WIP-red?&style=for-the-badge">
