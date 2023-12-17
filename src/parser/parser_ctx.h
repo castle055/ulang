@@ -20,6 +20,10 @@ namespace yy {
 #include <unordered_map>
 #include <utility>
 
+#include "pattern_parser.h"
+
+#include "runtime/runtime.h"
+
 struct ulang_token {
   std::string type{};
   std::string str{};
@@ -46,10 +50,6 @@ struct ulang_grammar {
       .type = non_terminal_node::SUB_OPTIONS,
       .sub_nodes = {},
     };
-    std::vector<std::vector<std::string>> options{};
-    
-    std::vector<std::vector<std::string>> patterns{};
-    std::vector<std::unordered_map<std::string, std::size_t>> index_maps{};
   };
   
   
@@ -118,7 +118,7 @@ private:
   };
   
   std::stack<std::vector<ulang_token>> parsed_tokens{{{}}};
-  std::stack<std::vector<std::string>> result_stack{{{}}};
+  std::stack<std::vector<pattern_result>> result_stack{{{}}};
   
   void error(const std::string& msg) {
   
@@ -153,7 +153,7 @@ private:
   
   bool accept(const std::string& token_type) {
     if (token.type == token_type) {
-      result_stack.top().push_back(token.str);
+      result_stack.top().push_back({.str = token.str});
       next();
       return true;
     }
@@ -229,76 +229,102 @@ private:
     if (node.pattern.empty()) {
       std::string s;
       for (const auto &_s: res) {
-        s.append(_s);
+        s.append(_s.apply({}));
       }
       result_stack.top().emplace_back(s);
     } else {
-      int indent = 0;
-      std::string p = node.pattern;
-      for (std::size_t off = 0; off < p.size(); ++off) {
-        if (p[off] == '$') {
-          std::string num_s;
-          off++;
-          while (::isdigit(p[off])) {
-            num_s += p[off];
-            ++off;
-          }
-          if (!num_s.empty()) {
-            std::string tmp = p.substr(0, off - num_s.size() - 1);
-            std::size_t term_index = std::stol(num_s);
-            std::string sub = res[term_index-1];
-            while (sub.ends_with('\n')) sub = sub.substr(0, sub.size()-1);
-            if (indent > 0) {
-              std::string ind = "\n";
-              for (int i = 0; i < indent; ++i) {
-                sub = std::string{"\t"}.append(sub);
-                ind.append("\t");
-              }
-              sub = regex_replace(sub,std::regex{"\\n", std::regex_constants::ECMAScript}, ind);
-            }
-            tmp.append(sub);
-            tmp.append(p.substr(off));
-            p = tmp;
-            
-            off += res[term_index-1].size()-num_s.size()-2;
-          }
-        } else if (p[off] == '\\') {
-          off++;
-          switch (p[off]) {
-            case 'n':
-              p[off-1] = '\n';
-              p.erase(p.begin()+off);
-              break;
-          }
-          off--;
-        } else if (p[off] == '%') {
-          off++;
-          bool matches = false;
-          switch (p[off]) {
-            case 'i':
-              off++;
-              if (p[off] == '+') {
-                indent++;
-                matches = true;
-              } else if (p[off] == '-') {
-                indent--;
-                matches = true;
-              }
-              if (matches) {
-                p.erase(p.begin()+off);
-                off--;
-                p.erase(p.begin()+off);
-              }
-              break;
-          }
-          if (matches) {
-            off--;
-            p.erase(p.begin()+off);
-          }
-          off--;
-        }
-      }
-      result_stack.top().push_back(p);
+      pattern_parser pparser{node.pattern};
+      pattern_result p_res = pparser.parse(res);
+      result_stack.top().push_back(p_res);
+    //  int indent = 0;
+    //  std::string p = node.pattern;
+    //  for (std::size_t off = 0; off < p.size(); ++off) {
+    //    if (p[off] == '$') {
+    //      std::string num_s;
+    //      off++;
+    //      if (::isdigit(p[off])) {
+    //        while (::isdigit(p[off])) {
+    //          num_s += p[off];
+    //          ++off;
+    //        }
+    //        if (!num_s.empty()) {
+    //          std::string tmp = p.substr(0, off - num_s.size() - 1);
+    //          std::size_t term_index = std::stol(num_s);
+    //          std::string sub = res[term_index - 1];
+    //          while (sub.ends_with('\n')) sub = sub.substr(0, sub.size() - 1);
+    //          if (indent > 0) {
+    //            std::string ind = "\n";
+    //            for (int    i   = 0; i < indent; ++i) {
+    //              if (tmp.empty() || tmp.back() == '\n') {
+    //                sub = std::string {"\t"}.append(sub);
+    //              }
+    //              ind.append("\t");
+    //            }
+    //            sub             = regex_replace(sub, std::regex {
+    //              "(\\n|\n)",
+    //              std::regex_constants::ECMAScript
+    //            }, ind);
+    //          }
+    //          tmp.append(sub);
+    //          tmp.append(p.substr(off));
+    //          p = tmp;
+    //
+    //          off += res[term_index - 1].size() - num_s.size() - 2;
+    //        }
+    //      } else if (p[off] == '[') {
+    //        off++;
+    //        std::vector<std::string> args{};
+    //
+    //        while (p[off] != ']') {
+    //
+    //        }
+    //      }
+    //    } else if (p[off] == '\\') {
+    //      off++;
+    //      switch (p[off]) {
+    //        case 'n':
+    //          p[off-1] = '\n';
+    //          p.erase(p.begin()+off);
+    //          if (indent > 0) {
+    //            std::string ind = "";
+    //            for (int i = 0; i < indent; ++i) { ind.append("\t"); }
+    //            std::string tmp = p.substr(0,off);
+    //            tmp.append(ind);
+    //            tmp.append(p.substr(off));
+    //            off += indent;
+    //            p = tmp;
+    //          }
+    //          break;
+    //      }
+    //      off--;
+    //    } else if (p[off] == '%') {
+    //      off++;
+    //      bool matches = false;
+    //      switch (p[off]) {
+    //        case 'i':
+    //          off++;
+    //          if (p[off] == '+') {
+    //            indent++;
+    //            matches = true;
+    //          } else if (p[off] == '-') {
+    //            indent--;
+    //            matches = true;
+    //          }
+    //          if (matches) {
+    //            p.erase(p.begin()+off);
+    //            off--;
+    //            p.erase(p.begin()+off);
+    //          }
+    //          break;
+    //      }
+    //      if (matches) {
+    //        off--;
+    //        p.erase(p.begin()+off);
+    //      }
+    //      off--;
+    //    }
+    //  }
+    //  result_stack.top().push_back(p);
     }
     return true;
   }
@@ -362,8 +388,8 @@ public:
     
     std::string s;
     for (const auto &item: result_stack.top()) {
-      if (!item.empty()) {
-        s = item;
+      if (!item.str.empty()) {
+        s = item.apply({}); //*** Parameters to 'root' rule
         break;
       }
     }
@@ -404,7 +430,7 @@ struct parser_ctx_t {
                         .str = "root",
                       },}},}},},}},},}}}},}};
   
-std::stack<ulang_grammar_ctx> current_grammar{{ulang_grammar_ctx{
+  std::stack<ulang_grammar_ctx> current_grammar{{ulang_grammar_ctx{
     "default", grammars["default"]
   }}};
   

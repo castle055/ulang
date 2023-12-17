@@ -3,8 +3,10 @@ BUILD_DIR := build
 #CC = gcc
 #OPT = -O3 -std=c11 -lfl
 CC = g++
-OPT = -O3 -std=c++2b -DUPARSER_GEN_EXEC
-uparser: $(BUILD_DIR)/lexer.cpp $(BUILD_DIR)/parser.cpp parser_ctx.cpp
+ECL_CFLAGS = $(shell ecl-config --cflags)
+ECL_LIBS = $(shell ecl-config --libs)
+OPT = -O3 -std=c++2b -DUPARSER_GEN_EXEC $(ECL_CFLAGS) $(ECL_LIBS)
+uparser: $(BUILD_DIR)/lexer.cpp $(BUILD_DIR)/parser.cpp parser_ctx.cpp runtime/runtime.cpp
 	$(CC) $(OPT) $^ -o $@
 
 $(shell mkdir -pv $(BUILD_DIR))

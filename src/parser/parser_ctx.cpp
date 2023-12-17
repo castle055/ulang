@@ -11,8 +11,9 @@
 
 #pragma clang diagnostic push
 #pragma ide diagnostic ignored "cppcoreguidelines-pro-type-member-init" // Yes, it does
-parser_ctx_t::parser_ctx_t(std::string  str)
+parser_ctx_t::parser_ctx_t(std::string str)
   : str(std::move(str)) {
+  ulang::runtime::init();
   yylex_init(&lexer);
   loc = new yy::location();
   parser = new yy::parser(lexer, *loc, *this);

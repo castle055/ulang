@@ -1,82 +1,73 @@
-#[grammar: assign-gr] {
-    tokens {
-        INT_NUM = /[0-9]+/
-        FLOAT_NUM = /[0-9]*\.[0-9]+/
-        ASSIGN = /->/
-        ID = /[a-zA-Z_]+[a-zA-Z0-9\-_]*/
-        LB = /\{/
-        RB = /\}/
-        MAIN = /main/
-        _WS = / /
-        _NL = /\n/
-    }
-    rules {
-        assign = INT_NUM ASSIGN ID <int $3 = $1;\n >
-               | FLOAT_NUM ASSIGN ID <double $3 = $1;\n>;
-        main_block = assign { main_block };
-
-        main = MAIN LB { main_block } RB <int main(int argc, char* argv[]) {\n%i+$3%i-\n}>;
-        root = main;
-    }
-}
-
+// CYD-UI Grammar test
 #[grammar: component] {
-    tokens {
-        COMP_BEGIN = /\|>/
-        COMP_END = /<\|/
-        PIPE = /\|/
-        EQ = /=/
-        ID = /[a-zA-Z_]+[a-zA-Z0-9\-_]*/
-        _WS = / /
-        _NL = /\n/
-    }
-    rules {
-        prop = PIPE ID EQ ID <.$2 = $4,>;
-        props_list = prop { props_list } <$1\n$2>;
-        props_spec = props_list <.props = {\n%i+$1%i-\n},>;
+  tokens {
+    COMP_BEGIN = /\|>/
+    COMP_END = /<\|/
+    PIPE = /\|/
+    EQ = /=/
+    LB = /\{/
+    RB = /\}/
+    ID = /[a-zA-Z_]+[a-zA-Z0-9\-_]*/
+    STATE_KW = /state/
+    _WS = / /
+    _NL = /\n/
+  }
+  rules {
+    prop = PIPE ID EQ ID <.$2 = $4,>;
+    props_list = prop { props_list } <$1
+      $2>;
+    props_spec = props_list <.props = {
+      $1},>;
 
-        component_spec = COMP_BEGIN ID props_spec component_spec COMP_END <COMP($2)({\n%i+$3\n.inner = {\n%i+$4%i-\n},%i-\n})>
-                       | COMP_BEGIN ID props_spec COMP_END <COMP($2)({\n%i+$3\n%i-})>;
-        inner_list = component_spec { root };
+    component_spec = COMP_BEGIN ID props_spec component_spec COMP_END <
+      COMP($2)({
+        $3
+        .inner = {
+          $4
+        },
+      }),
+    >              | COMP_BEGIN ID props_spec COMP_END <
+      COMP($2)({
+        $3
+      }),
+    >;
+    inner_list = component_spec { inner_list } <
+      $1
+      $2
+    >;
 
-        root = inner_list;
-    }
+    state_spec = STATE_KW LB RB <
+      STATE($[]) {
+        INIT_STATE($[]) {
+          ...
+        }
+      }
+    >;
+    component = ID state_spec inner_list <
+      $2[$1,$1]
+      COMPONENT($1) {
+        PROPS({})
+        INIT($1) { ENABLE_LOG }
+        REDRAW {
+          $3
+        }
+      }
+    >;
+
+    root = component;
+  }
 }
 
-[assign-gr|> main { 5 -> a 5 -> b 5 -> t }]
-
-[component|>
-    |>VBox
-      | spacing = some_var1
-      | w = some_var2
-    <|
-]
-
-[component|>
-    |>VBox
-      | spacing = some_var1
-      | w = some_var2
-      |>OtherComponent
-        | color = some_clr
-      <|
-    <|
-]
-
-[default|> SomeComponent
-  props {
-  }
+[component|> SomeComponent
   state {
   }
-
-  redraw {
-    <VBox spacing="5" w="dim->cw">
-      <OtherComponent color="#FCAE1E"/>
-    </VBox>
-
-    |>VBox
-      | spacing = some_var1
-      | w = some_var2
-      |>OtherComponent | color = "#FCAE1E" <|
+  |>VBox
+    | spacing = some_var1
+    | w = some_var2
+    |>OtherComponent
+      | color = some_clr
     <|
-  }
+  <|
 ]
+
+

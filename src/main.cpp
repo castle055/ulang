@@ -2,8 +2,11 @@
 #include <fstream>
 
 #include "parser/uparser.h"
+#include "parser/runtime/runtime.h"
 
-int main() {
+int main(int argc, char* argv[]) {
+  //cl_boot(argc, argv);
+  
   //cson_parser::parse("int a = 2; #[grammar: some-gr] { }");
   std::ifstream file("../test.ul");
   std::string file_s;

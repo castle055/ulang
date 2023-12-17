@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.26)
 project(ulang)
+set(CMAKE_MODULE_PATH "${CMAKE_MODULE_PATH}" "${CMAKE_SOURCE_DIR}/cmake/Modules/")
 
 set(CMAKE_CXX_STANDARD 23)
 
@@ -45,7 +46,10 @@ FILE(GLOB_RECURSE SRC_LIST
         ${CMAKE_CURRENT_LIST_DIR}/src/*.hpp
 )
 
-LIST(APPEND EXT_LIBS cydstd cyd_ui cyd_ui_std yaml-cpp playerctl glib-2.0 gobject-2.0 X11 Xft Xrender fontconfig jpeg)
+find_package(ECL REQUIRED)
+include_directories(${ECL_INCLUDE_DIR})
+
+LIST(APPEND EXT_LIBS cydstd cyd_ui cyd_ui_std yaml-cpp playerctl glib-2.0 gobject-2.0 X11 Xft Xrender fontconfig jpeg ${ECL_LIBRARIES})
 
 add_executable(ulang ${SRC_LIST})
 target_link_libraries(ulang PUBLIC ${EXT_LIBS})
