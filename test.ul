@@ -1,4 +1,83 @@
-// CYD-UI Grammar test
+// ULang files/modules
+#[insert: some_file.txt] // literally insert the contents of this file
+#[insert: other_file.ul] { // or if it's a template, pass in the arguments
+  some_templated_arg -> the argument to be passed to the template
+  title -> the title
+  other_args -> {
+    some multiline argument
+    for this template.
+  }
+}
+
+// ULang macros
+#[def: some_macro] {
+    -> no param substitution
+ (x)-> some substitution with $x and recursive #[some_macro]
+ (x,{})-> this overload accepts the param $x and one block ${}
+ (x,y)-> {
+  And this,
+  this, my friends, is a multiline macro.
+  
+  with any amount of lines.
+ }
+ (x,y,z)-> macro calls should be able to (re)define macros #[def: counter] -> #[counter] +1
+    // Although it may cause problems, think it through...
+}
+
+#[def: simplest_macro] -> just insert this
+#[def: some_var] -> I could also serve the purpose of a variable
+#[def: or_a_flag] // 'flags' are macros that substitute as nothing, but whose existence can be checked
+#[def: some_scope::other_flag] // defs can be scoped
+
+#[some_macro]
+#[some_macro(asdf)]
+#[some_macro(asdf)] {
+  // The block in question
+}
+
+#[args::title] // this is how you place template arguments! (they are in the 'args' scope)
+
+/// ULang control
+// simple conditional
+#[if: some_def] {
+
+} [else if: other_def] {
+
+} [else] {
+
+}
+
+// pattern matching
+#[with: some_def] {
+
+}
+
+// loops
+#[map: {0..1000}] -> repeat this one thousand times, this being the {}th time.
+
+// ULang grammars
+#[grammar: assign-gr] {
+    tokens {
+        INT_NUM = /[0-9]+/
+        FLOAT_NUM = /[0-9]*\.[0-9]+/
+        ASSIGN = /->/
+        ID = /[a-zA-Z_]+[a-zA-Z0-9\-_]*/
+        LB = /\{/
+        RB = /\}/
+        MAIN = /main/
+        _WS = / /
+        _NL = /\n/
+    }
+    rules {
+        assign = INT_NUM ASSIGN ID <int $3 = $1;\n >
+               | FLOAT_NUM ASSIGN ID <double $3 = $1;\n>;
+        main_block = assign { main_block };
+
+        main = MAIN LB { main_block } RB <int main(int argc, char* argv[]) {\n%i+$3%i-\n}>;
+        root = main;
+    }
+}
+
 #[grammar: component] {
   tokens {
     COMP_BEGIN = /\|>/
