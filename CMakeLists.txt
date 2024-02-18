@@ -49,7 +49,19 @@ FILE(GLOB_RECURSE SRC_LIST
 find_package(ECL REQUIRED)
 include_directories(${ECL_INCLUDE_DIR})
 
-LIST(APPEND EXT_LIBS cydstd cyd_ui cyd_ui_std yaml-cpp playerctl glib-2.0 gobject-2.0 X11 Xft Xrender fontconfig jpeg ${ECL_LIBRARIES})
+find_package(LLVM REQUIRED CONFIG)
+
+message(STATUS "Found LLVM ${LLVM_PACKAGE_VERSION}")
+message(STATUS "Using LLVMConfig.cmake in: ${LLVM_DIR}")
+
+include_directories(${LLVM_INCLUDE_DIR})
+separate_arguments(LLVM_DEFINITIONS_LIST NATIVE_COMMAND ${LLVM_DEFINITIONS})
+add_definitions(${LLVM_DEFINITIONS_LIST})
+execute_process(COMMAND llvm-config --libs all
+                OUTPUT_VARIABLE llvm_libs)
+string(STRIP ${llvm_libs} llvm_libs)
+
+LIST(APPEND EXT_LIBS cydstd cyd_ui cyd_ui_std yaml-cpp playerctl glib-2.0 gobject-2.0 X11 Xft Xrender fontconfig jpeg ${ECL_LIBRARIES} ${llvm_libs})
 
 add_executable(ulang ${SRC_LIST})
 target_link_libraries(ulang PUBLIC ${EXT_LIBS})

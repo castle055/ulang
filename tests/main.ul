@@ -1,0 +1,36 @@
+
+type base_t {
+  a: u8;
+} impl {
+  fn get_a = a;
+} impl as Printable {
+  fn print() = "Base";
+}
+
+type derived_t = base_t && {
+  b: u8 = 1;
+}
+
+impl derived_t {
+  fn get_a = a + 1;
+  fn get_b = b;
+} impl as Printable {
+  fn print() = "Derived";
+}
+
+fn test<T>(
+  a: T,
+  b: T = 1,
+): T {
+  ret a + b;
+}
+
+fn main: u8 {
+  let a = 2 + 2;
+  let b = test(a, 23);
+
+  let d: derived_t;
+  d.get_a();
+
+  ret 0;
+}

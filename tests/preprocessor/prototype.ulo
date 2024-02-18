@@ -1,0 +1,30 @@
+# Flag
+#[flag]
+
+## Definitions
+# Simplest
+hello world!
+
+# Multiline
+        hello, this is:
+        multiline def.
+        hello, this is:
+        multiline def.
+        hello, this is:
+        multiline def.
+
+# Multiple Overloads
+hello world!
+
+1
+1 + 1
+
+
+
+
+
+
+hello $x!
+#[def_w_args()]
+#[def_w_args(world)]
+#[def_w_args(castle)]

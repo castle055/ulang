@@ -1,0 +1,13 @@
+fn foo1
+fn foo2 { }
+fn foo3 = 5.23464
+fn foo4: u8 { }
+fn foo5: u8 = 5
+fn foo6(): u8 { }
+fn foo7(): u8 = 5
+fn foo8(a: u8): u8 { }
+fn foo9(a: u8): u8 = a
+fn foo10() { }
+fn foo11() = 5
+fn foo12(a: u8) { }
+fn foo13(a: u8) = a

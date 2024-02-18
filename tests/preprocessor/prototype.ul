@@ -1,0 +1,44 @@
+# Flag
+#[def: flag]
+#[flag]
+
+## Definitions
+# Simplest
+#[def: simplest_def] -> hello world!
+#[simplest_def]
+
+# Multiline
+#[def: multiline_def] -> {
+        hello, this is:
+        multiline def.
+}
+#[multiline_def]
+#[multiline_def]
+#[multiline_def]
+
+# Multiple Overloads
+#[def: test_def] {
+ -> hello world!
+}
+#[test_def]
+
+#[def: counter] -> 1
+#[def: inc_counter] ->
+ #[def: counter] -> \$[counter] + 1
+
+#[counter]
+#[inc_counter]
+#[counter]
+
+
+#[def: some_inst] -> 
+#[some_inst]
+#[some_inst]
+#[some_inst]
+
+#[def: def_w_args] (x) -> hello $x!
+
+#[def_w_args]
+#[def_w_args()]
+#[def_w_args(world)]
+#[def_w_args(castle)]

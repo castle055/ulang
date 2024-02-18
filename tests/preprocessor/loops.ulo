@@ -1,0 +1,14 @@
+#[def: map] {
+  (list..., transform)
+    ->#[$transform($list[0])] #[map($list[1:], transform)]
+}
+
+#[map((hello, world), quote)]
+
+hello planet!
+hello planet!
+hello world!
+hello castle!
+hello world and castle!
+
+"heh..."

@@ -1,0 +1,22 @@
+#[def: map] {
+  (list..., transform)
+    ->#[$transform($list[0])] #[map($list[1:], transform)]
+}
+
+#[def: quote] (x)->"$x"
+
+#[map((hello, world), quote)]
+
+#[def: def_w_args] {
+  -> hello planet!
+  (x) -> hello $x!
+  (x, y) -> hello $x and $y!
+}
+
+#[def_w_args]
+#[def_w_args()]
+#[def_w_args(world)]
+#[def_w_args(castle)]
+#[def_w_args(world, castle)]
+
+#[quote(heh...)]
